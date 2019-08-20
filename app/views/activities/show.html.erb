@@ -1,0 +1,65 @@
+<div class='container main-box'>
+  <div class='images'>
+    <div class='img rounded'><%= image_tag @activity.main_photo, alt: "Le Wagon", class: "img1"%></div>
+    <div class='img rounded'><%= image_tag @activity.second_photo, alt: "Le Wagon", class: "img1" %></div>
+  </div>
+  <div>
+    <div>
+      <div class='title-price-box m-3'>
+        <div><%= @activity.title %></div>
+        <div><%= @activity.unit_price / 100 %>€<span>/personne</span></div>
+      </div>
+      <div class='m-3'>
+        <%= @activity.description %>
+      </div>
+      <div class='m-3 info-box'>
+        <div><%= @activity.duration %> minutes</div>
+        <div><%= @activity.min_number_of_participants %> - <%=@activity.max_number_of_participants %> personnes</div>
+        <div><%= @activity.min_age %> ans min</div>
+        <div><%= @activity.category.capitalize %></div>
+      </div>
+      <div class='m-3'>
+        <h5>Horaires</h5>
+        <%= @activity.schedule %>
+      </div>
+      <div>
+        <h5>Nous situer</h5>
+        <%= @activity.address %> <%= @activity.zipcode %> <%= @activity.city %>
+        <map></map>
+      </div>
+    </div>
+    <div>
+      <div>
+        <% if user_signed_in? %>
+          <%= simple_form_for [@activity, @booking] do |f| %>
+            <div>
+              <h5>Participants</h5>
+              <%= f.input :number_of_participants, collection: [1, 2] %>
+            </div>
+            <div>
+              <h5>Dates</h5>
+              <%= f.input :date_time, collection: ["2019-08-21", "2019-08-22"] %>
+            </div>
+      <!--  <div>
+              <h2>Plage horaire</h2>
+              <%#= f.input :date_time, collection: ["09h00", "09h30", "10h00", "10h30", "11h00", "11h30", "12h00"] %>
+            </div> -->
+            <div>
+              <h5>Total</h5>
+              <%= @booking.total_price %>
+            </div>
+            <div>
+             <%= f.submit "Valider ma réservation" %>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to "Login before booking", new_user_session_path, class: "nav-link" %>
+        <% end %>
+      </div>
+      <div>
+        <h5>Les garanties</h5>
+        <p>Texte</p>
+      </div>
+    </div>
+  </div>
+</div>
