@@ -5,7 +5,7 @@
 }
 
 .top-banner {
-  height: 50vh;
+  height: 45vh;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);
   background-size: cover;
   background-position: center;
@@ -15,11 +15,63 @@
   text-align: center;
   padding-top: 15vh;
   color: white;
-  font-size: 36px;
 }
 
 .numbers-banner {
-  height: 25vh;
+  height: 22vh;
   background-color: $light-blue;
 }
+
+.hp-categories {
+  padding-top: 30px;
+  background-color: white;
+  height: 800px;
+}
+
+.container .dark-button {
+  margin-left: 42vh;
+  margin-top: 20px;
+}
+
+.hp-categories h2 {
+  margin-bottom: 20px;
+}
+
+.top-banner p {
+  color: white;
+  font-size: 27px;
+}
+
+.numbers-banner {
+  display: flex;
+  padding-left: 450px;
+}
+
+.numbers-banner h3 {
+  color: $blue-hp;
+  line-height: 1;
+}
+
+.numbers-banner p{
+  padding-top: 15px;
+}
+
+.strengh {
+  width: 200px;
+  margin: 30px 40px;
+  text-align: center;
+}
+
+.hp-card {
+  text-align: center;
+}
+
+
+#title-card > h3 {
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
 

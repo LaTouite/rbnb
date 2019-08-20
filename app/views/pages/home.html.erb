@@ -1,7 +1,7 @@
 <div class="top-banner">
   <div class="p-container">
     <h1><strong>Découvrez, réservez, have fun !</strong></h1>
-    <H2>+ de 1000 activités... pour tous les goûts</p>
+    <p>+ de 1000 activités... pour tous les goûts</p>
     <div class="search-bar">
 
     </div>
@@ -9,30 +9,42 @@
 </div>
 
 <div class="numbers-banner">
-  <div class="container">
-    <div class="-number-partner">
-
-    </div>
-    <div class="number-activities">
-
-    </div>
-    <div class="number-reviews">
-
-    </div>
+  <div class="strengh">
+    <h3>480</h3>
+    <h3 style="color: black">partenaires</h3>
+    <p>Sélectionnés par nos soins</p>
+  </div>
+  <div class="strengh">
+    <h3>1049</h3>
+    <h3 style="color: black">activités</h3>
+    <p>Laissez vous inspirer par nos différentes catégories et vivez une expérience unique</p>
+  </div>
+  <div class="strengh">
+    <h3>2038</h3>
+    <h3 style="color: black">avis certifiés</h3>
+    <p>Uniquement les clients ayant effectué l’activité peuvent laisser un avis</p>
   </div>
 </div>
 
 <div class="hp-categories">
   <div class="container">
     <h2>Top catégories</h2>
-    <div class="hp-cards">
+
+    <div class="row hp-cards">
       <% @activities.each do |activity| %>
-      <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-        <%= link_to activity.category, activities_path %>
+      <div class="p-2 col-4">
+        <%= link_to activities_path do %>
+        <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        </div>
+        <h3><%= activity.category%></h3>
+        <% end %>
+
+
       </div>
       <% end %>
     </div>
-    <a href="" class="button"></a>
+
+    <div class="dark-button"><%= link_to "Voir plus de catégories", activities_path %></div>
   </div>
 </div>
 
