@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <% @activities.each do |activity| %>
+        <img href= <%= @activity.main_photo %> >
+        <%= @activity.title %>
+        <%= @activity.city %>
+        <ul>
+          <li> <%= @activity.duration %> min</li>
+          <li> <%= @activity.min_number %> min</li>
+      </div>
+
+    </div>
+
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+
