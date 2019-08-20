@@ -2,7 +2,7 @@ class Activity < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :nullify
 
-  CATEGORIES = ["sports sensations", "sports nautiques", "activités extérieures", "bien-être", "loisirs créatifs"]
+  CATEGORIES = ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"]
 
   validates :title, presence: true
   validates :description, presence: true
