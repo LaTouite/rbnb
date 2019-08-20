@@ -4,7 +4,8 @@ class Booking < ApplicationRecord
 
   before_save :default_values
 
-  # validates :date_time, presence: true, not_in_past: true
+  validates :date_time, presence: true
+  # not_in_past: true
   validates :number_of_participants, presence: true
 
   private

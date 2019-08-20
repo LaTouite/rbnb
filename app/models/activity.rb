@@ -10,7 +10,8 @@ class Activity < ApplicationRecord
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :schedule, presence: true
   validates :min_number_of_participants, presence: true, numericality: { greater_than_or_equal_to:1 }
-  # validates :max_number_of_participants, presence: true, numericality: { greater_than_or_equal_to: min_number_of_participants }
+  validates :max_number_of_participants, presence: true
+  # numericality: { greater_than_or_equal_to: min_number_of_participants }
   validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :duration, presence: true, numericality: { greater_than_or_equal_to: 1 }
   validates :max_sessions, presence: true
