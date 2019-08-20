@@ -1,23 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class="col">
-      <div class="card">
-        <% @activities.each do |activity| %>
-        <img src= <%= activity.main_photo %> >
-        <%= activity.title %>
-        <%= activity.city %>
-        <ul>
-          <li> <%= activity.duration %> min</li>
-          <li> <%= activity.min_number_of_participants %> - <%= activity.max_number_of_participants %> participants</li>
-          <li> <%= activity.min_age %> ans min</li>
-        </ul>
-        <%= link_to "Découvrir", activity_path(activity) %>
+    <div class="col-6">
+      <% @activities.each do |activity| %>
+      <div class="card mb-3" style="width: 790px; height: 230px">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src= <%= activity.main_photo %> >
+          </div>
+
+          <div class="col-md-8">
+              <%= activity.title %>
+              <%= activity.city %>
+              <ul>
+                <li> <%= activity.duration %> min</li>
+                <li> <%= activity.min_number_of_participants %> - <%= activity.max_number_of_participants %> participants</li>
+                <li> <%= activity.min_age %> ans min</li>
+              </ul>
+              <%= link_to "Découvrir", activity_path(activity) %>
+          </div>
+        </div>
       </div>
       <%end%>
     </div>
 
-    <div class="col">
 
+    <div class="col-6">
+      <div> coucou </div>
     </div>
   </div>
 </div>
