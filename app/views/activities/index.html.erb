@@ -4,7 +4,7 @@
       <% @activities.each do |activity| %>
       <div class="lr-card">
         <img src= <%= activity.main_photo %> >
-          <div class="lr-card-info">
+          <div class="lr-card-info" id="list-activities">
             <div class="price">
               <h5> <%= activity.unit_price/100 %>€</h5>
               <p>/pers.</p>

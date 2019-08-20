@@ -1,0 +1,24 @@
+<div class="container">
+  <%= simple_form_for [@activity] do |f| %>
+    <h4>Votre activité</h4>
+    <%= f.input :title, label: 'Titre' %>
+    <%= f.input :description, label: 'Description' %>
+    <%= f.input :unit_price, label: 'Prix/pers' %>
+    <%= f.input :category, label: 'Catégorie', collection: ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"] %>
+    <%= f.input :duration, label: 'Durée' %>
+    <%= f.input :max_sessions, label: 'Nb max de sessions par jour' %>
+    <h4>Les participants</h4>
+    <%= f.input :min_number_of_participants, label: 'Nb min participants' %>
+    <%= f.input :max_number_of_participants, label: 'Nb max participants' %>
+    <%= f.input :min_age, label: 'Age min' %>
+    <h4>Vos coordonnées et horaires</h4>
+    <%= f.input :address, label: 'Adresse' %>
+    <%= f.input :zipcode, label: 'Code postal' %>
+    <%= f.input :city, label: 'Ville' %>
+    <%= f.input :schedule, label: 'Horaires' %>
+    <h4>Vos photos</h4>
+    <%= f.input :main_photo, label: 'URL photo principale' %>
+    <%= f.input :second_photo, label: 'URL photo secondaire' %>
+     <%= f.submit "Ajouter mon activité" %>
+    <% end %>
+  </div>
