@@ -1,8 +1,5 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
 <div class="top-banner">
-  <div class="container">
+  <div class="p-container">
     <h1><strong>Découvrez, réservez, have fun !</strong></h1>
     <H2>+ de 1000 activités... pour tous les goûts</p>
     <div class="search-bar">
@@ -29,9 +26,11 @@
   <div class="container">
     <h2>Top catégories</h2>
     <div class="hp-cards">
-      <div class="hp-card">
-
+      <% @activities.each do |activity| %>
+      <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        <%= link_to activity.category, activities_path %>
       </div>
+      <% end %>
     </div>
     <a href="" class="button"></a>
   </div>
@@ -41,9 +40,11 @@
   <div class="container">
     <h2>Les activitées du moment</h2>
     <div class="hp-cards">
-      <div class="hp-card">
-
+      <% @activities.each do |activity| %>
+      <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        <%= link_to activity.title, activities_path %>
       </div>
+      <% end %>
     </div>
     <a href="" class="button"></a>
   </div>

@@ -11,6 +11,8 @@
 puts 'Cleaning database...'
 #Users
 User.destroy_all
+Activity.destroy_all
+
 
 puts 'Creating users...'
 users_attributes = [
@@ -58,7 +60,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   address: "68 rue du port",
   zipcode: "13000",
   city: "Marseille",
-  user_id: 1
+  user: User.first
   },
 
     {
@@ -77,7 +79,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   address: "1 rue du port",
   zipcode: "85000",
   city: "Sables d'Olonnes",
-  user_id: 1
+  user: User.last
   },
 
   {
@@ -96,7 +98,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   address: "3 rue général De Gaulle",
   zipcode: "74000",
   city: "Féternes",
-  user_id: 1
+  user: User.last
   },
 
     {
@@ -115,7 +117,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   address: "15 rue Maurice Thorez",
   zipcode: "92000",
   city: "Courbevoie",
-  user_id: 1
+  user: User.last
   },
 
       {
@@ -143,7 +145,7 @@ Une activité parfaite pour les team building et les grand groupes",
   address: "23 rue Lala",
   zipcode: "33000",
   city: "Bordeaux",
-  user_id: 2
+  user: User.first
   },
 
       {
@@ -167,7 +169,7 @@ Prêt à dompter l'aboutissement d'une marque ?",
   address: "6 rue des mimosas",
   zipcode: "95000",
   city: "Trappes",
-  user_id: 2
+  user: User.first
   },
 
       {
@@ -190,7 +192,7 @@ Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre 
   address: "3 rue de La Grange",
   zipcode: "76000",
   city: "Deauville",
-  user_id: 2
+  user: User.first
   }
 ]
 Activity.create!(activities_attributes)
