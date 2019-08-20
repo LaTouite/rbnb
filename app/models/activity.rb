@@ -15,4 +15,6 @@ class Activity < ApplicationRecord
   validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :duration, presence: true, numericality: { greater_than_or_equal_to: 1 }
   validates :max_sessions, presence: true
+  validates :main_photo, presence: true
+  validates :second_photo, presence: true
 end
