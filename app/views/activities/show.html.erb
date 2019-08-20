@@ -1,65 +1,68 @@
-<div class='container main-box'>
+
+<div class='container main-box mt-3'>
   <div class='images'>
-    <div class='img rounded'><%= image_tag @activity.main_photo, alt: "Le Wagon", class: "img1"%></div>
-    <div class='img rounded'><%= image_tag @activity.second_photo, alt: "Le Wagon", class: "img1" %></div>
+    <div class='image-box'><%= image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
+    <div class='image-box'><%= image_tag @activity.second_photo, alt: "Le Wagon", class: "img rounded" %></div>
   </div>
-  <div>
-    <div>
+  <div class='content-booking-box'>
+    <div class='content-box'>
       <div class='title-price-box m-3'>
-        <div><%= @activity.title %></div>
-        <div><%= @activity.unit_price / 100 %>€<span>/personne</span></div>
+        <h2><%= @activity.title %></h2>
+        <div>
+          <h2 class='price'><%= @activity.unit_price / 100 %>€</h2>
+          <h6>/personne</h6>
+        </div>
       </div>
       <div class='m-3'>
-        <%= @activity.description %>
+        <p><%= @activity.description %></p>
       </div>
       <div class='m-3 info-box'>
-        <div><%= @activity.duration %> minutes</div>
-        <div><%= @activity.min_number_of_participants %> - <%=@activity.max_number_of_participants %> personnes</div>
-        <div><%= @activity.min_age %> ans min</div>
-        <div><%= @activity.category.capitalize %></div>
+        <div class="info"><%= @activity.duration %> minutes</div>
+        <div class="info"><%= @activity.min_number_of_participants %> - <%=@activity.max_number_of_participants %> personnes</div>
+        <div class="info"><%= @activity.min_age %> ans min</div>
+        <div class="info"><%= @activity.category.capitalize %></div>
       </div>
       <div class='m-3'>
         <h5>Horaires</h5>
         <%= @activity.schedule %>
       </div>
-      <div>
+      <div class='m-3'>
         <h5>Nous situer</h5>
         <%= @activity.address %> <%= @activity.zipcode %> <%= @activity.city %>
         <map></map>
       </div>
     </div>
-    <div>
-      <div>
+    <div class='booking-waranty-box'>
+      <div class='card booking-box m-3 p-3'>
         <% if user_signed_in? %>
           <%= simple_form_for [@activity, @booking] do |f| %>
             <div>
-              <h5>Participants</h5>
-              <%= f.input :number_of_participants, collection: [1, 2] %>
+              <%= f.input :number_of_participants, label: 'Participants', collection: (1..20) %>
             </div>
             <div>
-              <h5>Dates</h5>
-              <%= f.input :date_time, collection: ["2019-08-21", "2019-08-22"] %>
-            </div>
-      <!--  <div>
-              <h2>Plage horaire</h2>
-              <%#= f.input :date_time, collection: ["09h00", "09h30", "10h00", "10h30", "11h00", "11h30", "12h00"] %>
-            </div> -->
-            <div>
-              <h5>Total</h5>
-              <%= @booking.total_price %>
+              <%= f.input :date_time, label: 'Date', collection: ["2019-08-21", "2019-08-22"] %>
             </div>
             <div>
-             <%= f.submit "Valider ma réservation" %>
+              <%= f.input :date_time, label: 'Heure', collection: ["09h00", "09h30", "10h00", "10h30", "11h00", "11h30", "12h00", "12h30", "13h00", "13h30", "14h00"] %>
+            </div>
+            <div class='total mt-3 mb-3'>
+              <h6>Total</h6>
+              <h6><%= @booking.total_price, class:'price' %>€</h6>
+            </div>
+            <div class='mt-3 mb-3'>
+             <%= f.submit "Valider ma réservation", class: 'btn btn-primary submit-btn' %>
             </div>
           <% end %>
         <% else %>
-          <%= link_to "Login before booking", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login before booking", new_user_session_path, class: "btn" %>
         <% end %>
       </div>
-      <div>
+      <div class='m-3'>
         <h5>Les garanties</h5>
         <p>Texte</p>
       </div>
     </div>
+  </div>
+  <div style='height: 500px'>
   </div>
 </div>
