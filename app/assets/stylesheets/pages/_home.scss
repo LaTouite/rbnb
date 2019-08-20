@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+
+.hp-cards {
+  display: flex;
+}
+
+.top-banner {
+  height: 50vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.p-container {
+  text-align: center;
+  padding-top: 15vh;
+  color: white;
+  font-size: 36px;
+}
+
+.numbers-banner {
+  height: 25vh;
+  background-color: $light-blue;
+}
+
