@@ -1,7 +1,7 @@
 //= require rails-ujs
 //= require_tree .
-const price = document.querySelector(.price);
+// const price = document.querySelector(.price);
 
-price.addEventListener(click, (event) => {
+// price.addEventListener(click, (event) => {
 
-});
+// });
