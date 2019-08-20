@@ -8,5 +8,4 @@
 participants_nb.addEventListener("change", (event) => {
   const part = participants_nb.value;
   calcul.innerHTML = part * price_wo_currency;
-  // calcul.insertAdjacentHTML("afterbegin", part * price_wo_currency);
 });
