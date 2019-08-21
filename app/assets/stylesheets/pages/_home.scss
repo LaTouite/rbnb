@@ -5,7 +5,7 @@
 }
 
 .top-banner {
-  height: 35vw;
+  height: 480px;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);
   background-size: cover;
   background-position: center;
@@ -54,7 +54,7 @@
   display: flex;
   margin: 0 auto;
   height: 100%;
-  width: 50vw;
+  width: 900px;
   padding: 28px;
   // align-items: center;
 }
@@ -85,6 +85,12 @@
   font-size: 21px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.button-div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 
