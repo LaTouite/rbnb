@@ -46,7 +46,7 @@
   flex-grow: 1;
 }
 
-.lr-card-info a {
+#list-activities a {
   display: inline-block;
   border: 1px solid grey;
   border-radius: 5px;
@@ -58,6 +58,10 @@
 .lr-card-info .price {
   position: absolute;
   top: 20px; right: 20px;
+}
+
+#user-activities a {
+  display: inline-block
 }
 
 
