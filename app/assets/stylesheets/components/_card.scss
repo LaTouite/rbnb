@@ -48,22 +48,26 @@
 
 .lr-card-info ul {
   padding-top: 20px;
+  padding-left: 0px;
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 
 .lr-card-info li {
-  flex-grow: 1;
+  padding: 3px;
+  background-color: $light-purple;
+  border-radius: 5px;
 }
 
 #list-activities a {
   display: inline-block;
-  border: 1px solid grey;
+  border: 1px solid $dark-blue;
   border-radius: 5px;
   padding: 5px 25px;
   position: absolute;
   bottom: 20px; right: 20px;
+  color: $dark-blue;
 }
 
 .lr-card-info .price {
@@ -73,6 +77,11 @@
 
 #user-activities a {
   display: inline-block
+}
+
+.price h2, p {
+  margin: 0px;
+  letter-spacing: 0px;
 }
 
 

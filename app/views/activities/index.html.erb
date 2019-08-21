@@ -17,11 +17,11 @@
         <img src= <%= activity.main_photo %> >
           <div class="lr-card-info" id="list-activities">
             <div class="price">
-              <h5> <%= activity.unit_price/100 %>€</h5>
-              <p>/pers.</p>
+              <h2> <%= activity.unit_price/100 %>€</h2>
+              <p class="light-details">/pers.</p>
             </div>
-              <h4> <%= activity.title %> </h4>
-              <p> <%= activity.address %> </p>
+              <h3> <%= activity.title %> </h3>
+              <p class="light-details"> <%= activity.address %> </p>
               <ul>
                 <li> <%= activity.duration %> min</li>
                 <li> <%= activity.min_number_of_participants %> - <%= activity.max_number_of_participants %> participants</li>
