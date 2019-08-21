@@ -8,10 +8,18 @@
   text-decoration: none;
 }
 .top-banner {
-  height: 480px;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);
+  height: 500px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("banner.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.top-banner h1 {
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.top-banner p {
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .p-container {
@@ -28,7 +36,7 @@
 }
 
 .hp-categories h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .top-banner p {
@@ -38,13 +46,13 @@
 
 .top-banner .searchbar {
   // margin-left: 32vw;
-  margin-top: 55px;
+  margin-top: 70px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .numbers-banner {
-  height: 23vh;
+  height: 180px;
   background-color: $light-blue;
 }
 
@@ -60,10 +68,9 @@
 .numbers-banner h3 {
   color: $blue-hp;
   line-height: 1;
-  font-size: 18px;
 }
 
-.numbers-banner p{
+.numbers-banner p {
   padding-top: 15px;
 }
 
@@ -93,6 +100,11 @@
   padding: 40px;
 }
 
-
+#title-back-color {
+	background-color: $blue-hp;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
 
 
