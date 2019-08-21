@@ -30,6 +30,11 @@
 .title-price-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: $dark-blue;
 }
 
 .info-box {
@@ -38,7 +43,7 @@
 }
 
 .info {
-  background-color: #d4d7dd;
+  background-color: $light-purple;
   padding: 10px;
   border-radius: 10px;
 }
@@ -56,6 +61,10 @@
 
 .total {
   width: 100%;
+}
+
+.total-price {
+  color: $dark-purple;
 }
 
 .booking-box {

@@ -5,12 +5,12 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    # @activities = Activity.all
+    @activities = Activity.geocoded
+
     if params[:query].present?
-      @activities = Activity.where(category: params[:query])
-    else
-      @activities = Activity.all
+      @activities = @activities.where(category: params[:query])
     end
+
     @markers = @activities.geocoded.map do |activity|
       {
         lat: activity.latitude,
