@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-4 ajout-dashboard">
       <%=link_to "Ajouter une activité", new_activity_path %>
     </div>
    </div>
@@ -47,7 +47,7 @@
           <div class="lr-card-info" id="user-activities">
               <h4> <%= activity.title %> </h4>
               <p> <%= activity.address %> </p>
-              <ul>
+              <ul id="see-edit-delete">
                 <li><%= link_to "Voir les détails", activity_path(activity) %></li>
                 <li><%= link_to "Editer", edit_activity_path(activity) %></li>
                 <li>

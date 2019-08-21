@@ -25,17 +25,16 @@
       </div>
       <div class='m-3 border-bottom'>
         <h3>Horaires</h3>
-        <p><%= @activity.schedule %></p>
+        <p class='mb-3'><%= @activity.schedule %></p>
       </div>
       <div class='m-3 border-bottom'>
         <h3>Nous situer</h3>
         <p><%= @activity.address %></p>
-        <map>map à ajouter</map>
+        <map class='mb-3 mt-3 show-map'>map à ajouter</map>
       </div>
       <div class='m-3'>
         <h3>Avis sur les partenaires</h3>
         <p>Avis</p>
-        <map></map>
       </div>
     </div>
     <div class='booking-waranty-box'>
@@ -55,8 +54,8 @@
               <h6>Total</h6>
               <h6 class='total-price'><span class='calcul'></span>€</h6>
             </div>
-            <div class='mt-3 mb-3'>
-             <%= f.submit "Valider ma réservation", class: 'btn btn-primary submit-btn' %>
+            <div class='mt-3 mb-2'>
+              <%= f.submit "Valider ma réservation", class: 'dark-button resa-btn p-0' %>
             </div>
           <% end %>
         <% else %>
@@ -72,5 +71,4 @@
   <div style='height: 500px'>
   </div>
 </div>
-<%= javascript_include_tag "application" %>
-<%= javascript_pack_tag "application" %>
+
