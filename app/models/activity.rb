@@ -2,6 +2,9 @@ class Activity < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :nullify
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   CATEGORIES = ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"]
 
   validates :title, presence: true
@@ -9,6 +12,7 @@ class Activity < ApplicationRecord
   validates :unit_price, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :schedule, presence: true
+  validates :address, presence: true
   validates :min_number_of_participants, presence: true, numericality: { greater_than_or_equal_to:1 }
   validates :max_number_of_participants, presence: true
   # numericality: { greater_than_or_equal_to: min_number_of_participants }
