@@ -1,6 +1,6 @@
 <div class="top-banner">
   <div class="p-container">
-    <h1><strong>Découvrez, réservez, have fun !</strong></h1>
+    <h1>Découvrez, réservez, <span id="title-back-color">have fun!</span></h1>
     <p>+ de 1000 activités... pour tous les goûts</p>
 
     <%= form_tag activities_path, method: :get, class: "searchbar" do %>
@@ -9,7 +9,7 @@
         class: "form-control",
         placeholder: "Tapez votre recherche ici"
       %>
-      <%= submit_tag "Search", class: "dark-button" %>
+      <%= submit_tag "Rechercher", class: "dark-button" %>
     <% end %>
 
   </div>
@@ -44,13 +44,13 @@
     <h2>Top catégories</h2>
 
     <div class="row hp-cards">
-      <% @activities.each do |activity| %>
+      <% @categories.each do |category| %>
       <div class="p-2 col-4">
 
         <%= link_to activities_path do %>
-        <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category[:photo] %>)">
         </div>
-        <h3 id= "card-title"><%= activity.category%></h3>
+        <h3 id= "card-title"><%= category[:name] %></h3>
         <% end %>
 
 
@@ -63,6 +63,10 @@
   </div>
 </div>
 
+
+
+
+
 <div class="hp-categories">
   <div class="container">
     <h2>Les activitées du moment</h2>
@@ -72,7 +76,7 @@
       <div class="p-2 col-4">
 
         <%= link_to activities_path do %>
-        <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= activity.main_photo %>)">
         </div>
         <h3 id= "card-title"><%= activity.title%></h3>
         <% end %>
