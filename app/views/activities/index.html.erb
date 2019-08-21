@@ -1,14 +1,3 @@
-
-  <%= form_tag activities_path, method: :get, class: "searchbar" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Tapez votre recherche ici"
-    %>
-    <%= submit_tag "Rechercher", class: "dark-button" %>
-  <% end %>
-
-
 <div class="container-fluid lr">
   <% if @activities.size == 0 %>
     <h2> Désolé, nous n'avons aucune activité de ce type à vous proposer.<br> Mais nous en avons plein d'autres hyper cools 😁 </h2>
@@ -18,7 +7,7 @@
     <h2> <%=@activities.size %> chances de trouver votre bonheur </h2>
   <% end %>
   <div class="row">
-    <div class="col-8 lr-cards">
+    <div class="col-7 lr-cards">
       <% @activities.each do |activity| %>
       <div class="lr-card">
         <img src= <%= activity.main_photo %> >
@@ -34,8 +23,14 @@
             <div class="list-details">
               <ul>
                 <li> <%= activity.duration %> min</li>
-                <li> <%= activity.min_number_of_participants %> - <%= activity.max_number_of_participants %> participants</li>
-                <li> <%= activity.min_age %> ans min</li>
+                  <% if activity.min_number_of_participants == activity.max_number_of_participants && activity.min_number_of_participants == 1 %>
+                    <li> 1 participant </li>
+                  <% elsif activity.min_number_of_participants == activity.max_number_of_participants %>
+                    <li> <%= activity.min_number_of_participants %> participants </li>
+                  <% else %>
+                    <li> <%= activity.min_number_of_participants %> - <%= activity.max_number_of_participants %> participants </li>
+                  <% end %>
+                <li> <%= activity.min_age %>ans min.</li>
               </ul>
             </div>
               <%= link_to "Découvrir", activity_path(activity) %>
@@ -45,7 +40,7 @@
     </div>
 
 
-    <div class="col-4">
+    <div class="col-5">
       <div
   id="map"
   data-markers="<%= @markers.to_json %>"

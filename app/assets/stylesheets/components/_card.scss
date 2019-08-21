@@ -4,6 +4,11 @@
   margin-top: 20px;
 }
 
+.lr h2 {
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
 .hp-card {
   height: 210px;
   border-radius: 5px;
@@ -39,7 +44,7 @@
 
 .lr-card-info {
   position: relative;
-  padding: 15px;
+  padding: 22px;
   height: 100%;
   flex-grow: 1;
 }
@@ -57,7 +62,10 @@
 }
 
 .lr-card-info li {
-  padding: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: $light-purple;
   border-radius: 5px;
 }
@@ -70,11 +78,18 @@
   position: absolute;
   bottom: 20px; right: 20px;
   color: $dark-blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#list-activities a:hover {
+  color: white;
+  background-color: $dark-blue;
 }
 
 .lr-card-info .price {
   position: absolute;
-  top: 15px; right: 20px;
+  top: 22px; right: 20px;
 }
 
 #user-activities a {

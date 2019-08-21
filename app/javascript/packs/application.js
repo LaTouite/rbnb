@@ -19,3 +19,10 @@ if (document.querySelector("#booking_number_of_participants")) {
 }
 
 initMapbox();
+
+const form = document.querySelector("#new_booking");
+if (form) {
+  form.addEventListener("submit", (event) => {
+    alert("Votre réservation est bien prise en compte ! Merci !")
+  });
+}
