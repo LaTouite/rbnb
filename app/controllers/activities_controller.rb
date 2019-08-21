@@ -5,7 +5,12 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    @activities = Activity.all
+    # @activities = Activity.all
+    if params[:query].present?
+      @activities = Activity.where(category: params[:query])
+    else
+      @activities = Activity.all
+    end
   end
 
   def new
