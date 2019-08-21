@@ -13,9 +13,7 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10',
-      zoom: 5,
-      center: [1.9814412, 48.7566151]
+      style: 'mapbox://styles/mapbox/streets-v10'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
       markers.forEach((marker) => {
@@ -23,7 +21,7 @@ const initMapbox = () => {
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
   });
-    itMapToMarkers(map, markers);
+    fitMapToMarkers(map, markers);
   }
 };
 
