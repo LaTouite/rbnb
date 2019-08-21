@@ -1,14 +1,16 @@
 <div class="container">
-  <div class="row">
-    <div class="col-8 chiffres-user">
+  <div class="row top-myactivities">
+    <div class="col-8 chiffres-user-card">
       <h3> Vos chiffres du mois </h3>
+      <br>
+      <div class="chiffres-user">
         <div class="nb-resa">
           <% sum = 0 %>
           <% @activities.each do |activity| %>
           <% number_booking = activity.bookings.length %>
           <% sum += number_booking %>
           <%end%>
-          <h5> <%= sum %> réservations </h5>
+          <h5> <%= sum %> réservation(s) </h5>
           <p>Voir les détails</p>
         </div>
         <div class="chiffre-affaires">
@@ -28,6 +30,7 @@
           <h5> 18 avis </h5>
           <p>Voir les détails</p>
         </div>
+      </div>
     </div>
     <div class="col-4">
       <%=link_to "Ajouter une activité", new_activity_path %>
@@ -43,7 +46,7 @@
         <img src= <%= activity.main_photo %> >
           <div class="lr-card-info" id="user-activities">
               <h4> <%= activity.title %> </h4>
-              <p> <%= activity.city %> </p>
+              <p> <%= activity.address %> </p>
               <ul>
                 <li><%= link_to "Voir les détails", activity_path(activity) %></li>
                 <li><%= link_to "Editer", edit_activity_path(activity) %></li>
