@@ -8,5 +8,24 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
+}
+
+.navbar-brand {
+  border-radius: 50%;
+  overflow:auto;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-transparent {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  .nav-link {
+    color: white !important;
+  }
 }
