@@ -57,9 +57,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   max_sessions: 24,
   main_photo: "https://images.unsplash.com/photo-1533438460928-a2e8bf416ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
   second_photo: "https://images.unsplash.com/photo-1564152280562-831ada3431b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2005&q=80",
-  address: "68 rue du port",
-  zipcode: "13000",
-  city: "Marseille",
+  address: "15 Boulevard Charles Livon, 13007 Marseille",
   user: User.first
   },
 
@@ -74,16 +72,14 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   min_age: 18,
   duration: 45,
   max_sessions: 15,
-  main_photo: "https://unsplash.com/photos/ynRImHi8LnY",
-  second_photo: "https://images.unsplash.com/photo-1557075481-b25e34c9e208?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
-  address: "1 rue du port",
-  zipcode: "85000",
-  city: "Sables d'Olonnes",
+  main_photo: "https://images.unsplash.com/photo-1557075481-b25e34c9e208?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+  second_photo: "https://unsplash.com/photos/ynRImHi8LnY",
+  address: "56 Corniche Président John Fitzgerald Kennedy, 13007 Marseille",
   user: User.last
   },
 
   {
-  title: "Rafting près de Morzine",
+  title: "Rafting",
   description: "Le raft est une embarcation constituée de plusieurs caissons gonflable extrêmement solide assurant l'insubmersibilité du bateau. Un guide diplômé d'Etat expliquant toutes les manœuvres et consignes aux occupants avant le départ pour le plaisir. C'est une activité accessible à tous, notre parcours se situe en Haute Savoie et permet de naviguer en toute sécurité sur nos torrents alpins, pour le plaisir des yeux, pour le goût de l’effort partagé ou pour la découverte des paysages sauvages et des histoires de nos vallées (métiers d'antan, castors, pont Eiffel...).",
   unit_price: 4000,
   category: "sports nautiques",
@@ -95,9 +91,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   max_sessions: 4,
   main_photo: "https://images.unsplash.com/photo-1558459023-2df6e5daa5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80",
   second_photo: "https://images.unsplash.com/photo-1508166466920-f65aa51f727c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  address: "3 rue général De Gaulle",
-  zipcode: "74000",
-  city: "Féternes",
+  address: "30 Cours Honoré d'Estienne d'Orves, 13001 Marseille",
   user: User.last
   },
 
@@ -114,9 +108,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   max_sessions: 50,
   main_photo: "https://images.unsplash.com/photo-1558043279-a860bfe6d3b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
   second_photo: "https://images.unsplash.com/photo-1560800633-2bbfcc011fb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-  address: "15 rue Maurice Thorez",
-  zipcode: "92000",
-  city: "Courbevoie",
+  address: "47 Avenue de l'Europe, 92400 Courbevoie",
   user: User.last
   },
 
@@ -142,9 +134,7 @@ Une activité parfaite pour les team building et les grand groupes",
   max_sessions: 20,
   main_photo: "https://images.unsplash.com/photo-1470506926202-05d3fca84c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
   second_photo: "https://unsplash.com/photos/CtK61qhBfyw",
-  address: "23 rue Lala",
-  zipcode: "33000",
-  city: "Bordeaux",
+  address: "2 rue de la Boétie, Paris",
   user: User.first
   },
 
@@ -166,9 +156,7 @@ Prêt à dompter l'aboutissement d'une marque ?",
   max_sessions: 12,
   main_photo: "https://images.unsplash.com/photo-1485906441524-ed91f8315b4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   second_photo: "https://images.unsplash.com/photo-1505739818593-e7506ebf74c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  address: "6 rue des mimosas",
-  zipcode: "95000",
-  city: "Trappes",
+  address: "28 Avenue des Frères Lumière, 78190 Trappes",
   user: User.first
   },
 
@@ -189,9 +177,7 @@ Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre 
   max_sessions: 6,
   main_photo: "https://images.unsplash.com/photo-1489731254138-5401fb834d9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
   second_photo: "https://images.unsplash.com/photo-1508093303029-e802a4ddcd94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  address: "3 rue de La Grange",
-  zipcode: "76000",
-  city: "Deauville",
+  address: "3 Avenue Pierre Brossolette, Saint-Maur-des-Fossés",
   user: User.first
   }
 ]
