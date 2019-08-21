@@ -1,14 +1,3 @@
-
-  <%= form_tag activities_path, method: :get, class: "searchbar" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Tapez votre recherche ici"
-    %>
-    <%= submit_tag "Search", class: "dark-button" %>
-  <% end %>
-
-
 <div class="container-fluid lr">
   <% if @activities.size == 0 %>
     <h2> Désolé, nous n'avons aucune activité de ce type à vous proposer.<br> Mais nous en avons plein d'autres hyper cools 😁 </h2>
