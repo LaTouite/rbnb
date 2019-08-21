@@ -4,6 +4,9 @@
   display: flex;
 }
 
+.hp-cards a {
+  text-decoration: none;
+}
 .top-banner {
   height: 480px;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);
@@ -22,11 +25,6 @@
   padding-top: 50px;
   background-color: white;
   height: 675px;
-}
-
-.container .dark-button {
-  margin-left: 42vh;
-  margin-top: 35px;
 }
 
 .hp-categories h2 {
@@ -91,6 +89,8 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 
