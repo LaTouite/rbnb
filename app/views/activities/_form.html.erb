@@ -30,27 +30,43 @@
       </div>
 
       <div class="tab-pane fade" id="participants" role="tabpanel" aria-labelledby="participants-tab">
-        <%= f.input :min_number_of_participants, label: 'Nb min participants' %>
-        <%= f.input :max_number_of_participants, label: 'Nb max participants' %>
-        <%= f.input :min_age, label: 'Age min' %>
+        <div class="field">
+          <i class="fas fa-user"></i>
+          <%= f.input :min_number_of_participants, label: 'Nb min participants', id:'field_text' %>
+        </div>
+        <div class="field">
+          <i class="fas fa-users"></i>
+          <%= f.input :max_number_of_participants, label: 'Nb max participants', id:'field_text'  %>
+        </div>
+        <div class="field">
+          <i class="fas fa-ban"></i>
+          <%= f.input :min_age, label: 'Age min', id:'field_text'  %>
+        </div>
       </div>
 
       <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
-        <%= f.input :address, label: 'Adresse complète' %>
-        <i class="far fa-clock"></i><%= f.input :schedule, label: 'Horaires', class: 'schedule_form' %>
+        <div class="field">
+          <i class="fas fa-map-marker-alt"></i>
+          <%= f.input :address, label: 'Adresse complète', id:'field_text'  %>
+        </div>
+        <div class="field">
+          <i class="far fa-clock"></i>
+          <%= f.input :schedule, label: 'Horaires', id:'field_text'  %>
+        </div>
       </div>
 
       <div class="tab-pane fade" id="pictures" role="tabpanel" aria-labelledby="pictures-tab">
-        <h4>Vos photos</h4>
-        <%= f.input :main_photo, label: 'URL photo principale' %>
+        <%= f.input :main_photo, label: 'Photo principale' %>
         <%= f.input :main_photo_cache, as: :hidden %>
-        <%= f.input :second_photo, label: 'URL photo secondaire' %>
+        <%= f.input :second_photo, label: 'Photo secondaire' %>
         <%= f.input :second_photo_cache, as: :hidden %>
-         <% if @activity.id? %>
-          <%= f.submit "Modifier mon activité", class: "dark-button" %>
-         <% else %>
-          <%= f.submit "Ajouter mon activité", class: "dark-button" %>
-        <% end %>
+        <div class="button_holder">
+          <% if @activity.id? %>
+            <%= f.submit "Modifier mon activité", class: "dark-blue-empty-button" %>
+          <% else %>
+            <%= f.submit "Ajouter mon activité", class: "dark-blue-empty-button" %>
+          <% end %>
+        </div>
         <% end %>
       </div>
 
