@@ -33,7 +33,9 @@
       </div>
     </div>
     <div class="col-4 ajout-dashboard">
-      <%=link_to "Ajouter une activité", new_activity_path %>
+        <div class="dark-blue-empty-button"> <a href="#"> Modifier ma fiche partenaire </a> </div>
+        <div class="dark-blue-empty-button"> <%=link_to "Réserver une activité", activities_path %> </div>
+        <div class="dark-button"> <%=link_to "Ajouter une activité", new_activity_path %> </div>
     </div>
    </div>
 
@@ -60,7 +62,7 @@
           <div class="col-8">
             <h3> Vos activités en ligne </h3>
             <% @activities.each do |activity| %>
-            <div class="lr-card">
+            <div class="lr-card" id="lr-card-myactivities">
               <img src= <%= activity.main_photo %> >
                 <div class="lr-card-info" id="user-activities">
                     <h4> <%= activity.title %> </h4>
@@ -94,8 +96,8 @@
             <h3> Vos réservations </h3>
             <% @bookings.each do |booking| %>
               <div class="reservation">
-                <h3> Le <%= booking.date_time %> </h3>
-              <div class="lr-card">
+                <h3> Le <%= booking.date_time.strftime("%d/%m/%Y") %> à <%= booking.date_time.strftime("%H:%M") %> </h3>
+              <div class="lr-card" id="lr-card">
                 <img src= <%= booking.activity.main_photo %> >
                   <div class="lr-card-info" id="user-activities">
                     <div class="price">
@@ -111,7 +113,7 @@
                         <li> Rappel : <%= booking.activity.min_age %>ans min.</li>
                       </ul>
                     </div>
-                    <%= link_to "Voir l'activité", activity_path(booking.activity) %>
+                    <%= link_to "Voir l'activité", activity_path(booking.activity), id:"btn-dark-blue" %>
                   </div>
               </div>
               <%end%>
