@@ -1,3 +1,7 @@
+<div class='images'>
+  <div class='image-box main-img1'><%= image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
+  <div class='image-box main-img2'><%= image_tag @activity.second_photo, alt: "Le Wagon", class: "img rounded" %></div>
+</div>
 <div class='container main-box mt-3'>
   <div class='images'>
     <div class='image-box'><%= cl_image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
@@ -13,28 +17,28 @@
             <p id='light-details'>/personne</p>
           </div>
         </div>
-        <div class='mb-3'>
+        <div class='act-description'>
           <p><%= @activity.description.capitalize %></p>
         </div>
-        <div class='mb-3 info-box'>
+        <div class='info-box'>
           <p class="info"><%= @activity.duration %> minutes</p>
           <p class="info"><%= @activity.min_number_of_participants %> - <%=@activity.max_number_of_participants %> personnes</p>
           <p class="info"><%= @activity.min_age %> ans min</p>
           <p class="info"><%= @activity.category.capitalize %></p>
         </div>
       </div>
-      <div class='m-3 border-bottom'>
-        <h3>Horaires</h3>
+      <div class='ml-3 mr-3 pb-4 pt-4 border-bottom horaires' >
+        <h3 class='mb-3'>Horaires</h3>
         <p class='mb-3'><%= @activity.schedule %></p>
       </div>
-      <div class='m-3 border-bottom'>
-        <h3>Nous situer</h3>
-        <p><%= @activity.address %></p>
-        <map class='mb-3 mt-3 show-map'>map à ajouter</map>
+      <div class='m-3 pb-4 border-bottom'>
+        <h3 class='mb-3'>Nous situer</h3>
+        <p class='mb-3'><%= @activity.address %></p>
+        <div id="map" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="pk.eyJ1IjoiY2FtaWxsZWR0eSIsImEiOiJjanpsMTVrZWcwaXQ3M2RuMG1rM242Y3FtIn0.wDpYPwI1WAXhfDMZggbOXw"></div>
       </div>
-      <div class='m-3'>
-        <h3>Avis sur les partenaires</h3>
-        <p>Avis</p>
+      <div class='m-3 pt-4'>
+        <h3 class='mb-3'>Avis sur les partenaires</h3>
+        <p class='mb-3'>Avis</p>
       </div>
     </div>
     <div class='booking-waranty-box'>
