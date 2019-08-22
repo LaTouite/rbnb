@@ -23,7 +23,7 @@
               <%end%>
             <% ca += ca_per_activity %>
           <%end%>
-          <h5> <%= ca/100 %> euros gagnés </h5>
+          <h5> <%= ca %> euros gagnés </h5>
           <p>Voir les détails</p>
         </div>
         <div class="nb_avis">
@@ -33,41 +33,100 @@
       </div>
     </div>
     <div class="col-4 ajout-dashboard">
-      <%=link_to "Ajouter une activité", new_activity_path %>
+        <div class="dark-blue-empty-button"> <a href="#"> Modifier ma fiche partenaire </a> </div>
+        <div class="dark-blue-empty-button"> <%=link_to "Réserver une activité", activities_path %> </div>
+        <div class="dark-button"> <%=link_to "Ajouter une activité", new_activity_path %> </div>
     </div>
    </div>
 
+<!-- Si activités et bookings -->
 
-  <div class="row">
-    <div class="col-8">
-      <h3> Vos activités en ligne </h3>
-      <% @activities.each do |activity| %>
-      <div class="lr-card">
-        <img src= <%= activity.main_photo %> >
-          <div class="lr-card-info" id="user-activities">
-              <h4> <%= activity.title %> </h4>
-              <p> <%= activity.address %> </p>
-              <ul id="see-edit-delete">
-                <li><%= link_to "Voir les détails", activity_path(activity) %></li>
-                <li><%= link_to "Editer", edit_activity_path(activity) %></li>
-                <li>
-                  <%= link_to "Supprimer", activity_path(activity),
-                      method: :delete,
-                      data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
-                </li>
-              </ul>
+<!-- Navbar tabs -->
+  <% if current_user.activities.any? && current_user.bookings.any? %>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="my_activities-tab" data-toggle="tab" href="#my_activities" role="tab" aria-controls="my_activities" aria-selected="true">Mes activités</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="bookings-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="bookings" aria-selected="false">Mes réservations</a>
+      </li>
+    </ul>
+  <% end %>
+
+<!-- Affichage "Mes activités" -->
+  <div class="tab-content" id="myTabContent">
+
+  <% if current_user.activities.any? %>
+    <div class="tab-pane fade show active" id="my_activities" role="tabpanel" aria-labelledby="my_activities-tab">
+      <div class="row">
+          <div class="col-8">
+            <h3> Vos activités en ligne </h3>
+            <% @activities.each do |activity| %>
+            <div class="lr-card" id="lr-card-myactivities">
+              <img src= <%= activity.main_photo %> >
+                <div class="lr-card-info" id="user-activities">
+                    <h4> <%= activity.title %> </h4>
+                    <p> <%= Geocoder.search(activity.address).first.city %> </p>
+                    <ul id="see-edit-delete">
+                      <li><%= link_to "Voir les détails", activity_path(activity) %></li>
+                      <li><%= link_to "Editer", edit_activity_path(activity) %></li>
+                      <li>
+                        <%= link_to "Supprimer", activity_path(activity),
+                            method: :delete,
+                            data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <%end%>
+          </div>
+
+          <div class="col-4">
+            <div>  </div>
           </div>
       </div>
-      <%end%>
     </div>
+  <% end %>
 
+<!-- Affichage "Mes bookings" -->
+<% if current_user.bookings.any? %>
+  <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+      <div class="row">
+          <div class="col-8">
+            <h3> Vos réservations </h3>
+            <% @bookings.each do |booking| %>
+              <div class="reservation">
+                <h3> Le <%= booking.date_time.strftime("%d/%m/%Y") %> à <%= booking.date_time.strftime("%H:%M") %> </h3>
+              <div class="lr-card" id="lr-card">
+                <img src= <%= booking.activity.main_photo %> >
+                  <div class="lr-card-info" id="user-activities">
+                    <div class="price">
+                      <p> Prix total </p>
+                      <h2> <%= booking.total_price%>€</h2>
+                    </div>
+                    <h4> <%= booking.activity.title %> </h4>
+                    <p> <%= Geocoder.search(booking.activity.address).first.city %> </p>
+                    <div class="list-details">
+                      <ul>
+                        <li> <%= booking.activity.duration %> min</li>
+                        <li> <%= booking.number_of_participants %> participants</li>
+                        <li> Rappel : <%= booking.activity.min_age %>ans min.</li>
+                      </ul>
+                    </div>
+                    <%= link_to "Voir l'activité", activity_path(booking.activity), id:"btn-dark-blue" %>
+                  </div>
+              </div>
+              <%end%>
+            </div>
+          </div>
 
-    <div class="col-4">
-      <div>  </div>
+          <div class="col-4">
+            <div>  </div>
+          </div>
+      </div>
     </div>
-  </div>
+  <% end %>
+
 </div>
-
-
 
 

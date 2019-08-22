@@ -18,5 +18,7 @@ class PagesController < ApplicationController
       number_booking = activity.bookings.length
       sum += number_booking
     end
+
+    @bookings = current_user.bookings
   end
 end

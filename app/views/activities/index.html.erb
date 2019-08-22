@@ -10,19 +10,17 @@
     <div class="col-5 lr-cards">
       <% @activities.each do |activity| %>
       <div class="lr-card">
-        <img src= <%= activity.main_photo %> >
+        <%= cl_image_tag activity.main_photo %>
         <div class="award-tag-yellow">
           <p>Award</p>
-          <img src="trophy2.png" alt="">
         </div>
         <div class="award-tag-blue">
           <p>Top</p>
           <p>Player</p>
-          <img src="trophy2.png" alt="">
         </div>
           <div class="lr-card-info" id="list-activities">
             <div class="price">
-              <h2> <%= activity.unit_price/100 %>€</h2>
+              <h2> <%= activity.unit_price %>€</h2>
               <p id="light-details">/pers.</p>
             </div>
             <div class="title-city">
@@ -42,7 +40,7 @@
                 <li> <%= activity.min_age %>ans min.</li>
               </ul>
             </div>
-              <%= link_to "Découvrir", activity_path(activity) %>
+              <div class="dark-blue-empty-button" id="small-btn"> <%= link_to "Découvrir", activity_path(activity) %> </div>
         </div>
       </div>
       <%end%>

@@ -47,7 +47,7 @@ Découvrez également les plaisirs du bi-skis : initiation ludique vous permetta
 Alors qu'attendez-vous ?
 En premier lieu, des conseils pédagogiques vous seront donnés afin d'assurer votre sécurité.
 Une fois la combinaison mise, vous pouvez vivre votre activité à fond et découvrir le ski nautique !",
-  unit_price: 5000,
+  unit_price: 50,
   category: "sports nautiques",
   schedule: "Du lundi au vendredi : 12h à 20h. Attention, centre fermé le mardi. Le week-end : 10h - 20h30.",
   min_number_of_participants: 1,
@@ -55,8 +55,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   min_age: 16,
   duration: 20,
   max_sessions: 24,
-  main_photo: "https://images.unsplash.com/photo-1533438460928-a2e8bf416ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  second_photo: "https://images.unsplash.com/photo-1564152280562-831ada3431b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2005&q=80",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450821/di1xrktli5uruhznfl7l.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450827/aeefv1ej0siup8behzoz.jpg",
   address: "15 Boulevard Charles Livon, 13007 Marseille",
   user: User.first
   },
@@ -64,7 +64,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
     {
   title: "Location de jet ski",
   description: "La plus grande base nautique de Vendée, et la SEULE BASE SABLAISE de location de JET SKI, vous accueille pour vous faire découvrir les joies de la glisse. Une expérience unique, des émotions fortes, des souvenirs inoubliables, un 'cocktail' idéal pour repartir avec des souvenirs plein la tête. Faites vous plaisir ! Dès 16 ans, pilotez seul votre jet ski ! Naviguez en toute sécurité. Pour ceux qui connaissent pas encore : l'expérience est unique ! Pour ceux qui connaissent déjà : plus rien à dire ! ils sont convaincus. Accompagné d'un éducateur sportif diplômé d'Etat et passionné, vous naviguerez au gré des vagues de la côté Vendéenne. Sur un jet ski (ou scooter des mers), vous irez à toute allure sur les eaux turquoises de l'Atlantique. Même sans permis bateau, c'est vous qui piloterez votre jet ski, et pourrez même avoir un passager arrière, tant que celui fait au minimum 1m40. Vous aurez le choix de plusieurs jet ski, tous de la marque Yamaha. Possibilité de naviguer seul à partir de 16 ans si vous détenez un permis bateau.",
-  unit_price: 7500,
+  unit_price: 75,
   category: "sports nautiques",
   schedule: "Du 1e avril au 30 septembre (7/7j)",
   min_number_of_participants: 1,
@@ -72,16 +72,16 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   min_age: 18,
   duration: 45,
   max_sessions: 15,
-  main_photo: "https://images.unsplash.com/photo-1557075481-b25e34c9e208?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
-  second_photo: "https://unsplash.com/photos/ynRImHi8LnY",
-  address: "56 Corniche Président John Fitzgerald Kennedy, 13007 Marseille",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450598/f00mwt26scwrle8z1pld.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451161/gjbkqnojbpg1vwgbuzez.jpg",
+  address: "402 chemin du Roucas Blanc, Marseille",
   user: User.last
   },
 
   {
   title: "Rafting",
   description: "Le raft est une embarcation constituée de plusieurs caissons gonflable extrêmement solide assurant l'insubmersibilité du bateau. Un guide diplômé d'Etat expliquant toutes les manœuvres et consignes aux occupants avant le départ pour le plaisir. C'est une activité accessible à tous, notre parcours se situe en Haute Savoie et permet de naviguer en toute sécurité sur nos torrents alpins, pour le plaisir des yeux, pour le goût de l’effort partagé ou pour la découverte des paysages sauvages et des histoires de nos vallées (métiers d'antan, castors, pont Eiffel...).",
-  unit_price: 4000,
+  unit_price: 40,
   category: "sports nautiques",
   schedule: "Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi",
   min_number_of_participants: 4,
@@ -89,8 +89,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   min_age: 8,
   duration: 120,
   max_sessions: 4,
-  main_photo: "https://images.unsplash.com/photo-1558459023-2df6e5daa5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80",
-  second_photo: "https://images.unsplash.com/photo-1508166466920-f65aa51f727c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450800/t6q4ibpu57cyfwbmk2sd.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450791/cibgdfpcnqhwdx487oni.jpg",
   address: "30 Cours Honoré d'Estienne d'Orves, 13001 Marseille",
   user: User.last
   },
@@ -98,7 +98,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
     {
   title: "Laser Game Xmax",
   description: "LE PREMIER Laser Game DU 92 ! Un labyrinthe de 480 m2 sur 3 niveaux où vous serez au coeur du jeu ! Le Laser Game vous propose aussi un bar lounge, une salle de jeux (avec baby-foot, palets, basket,…) et une salle « after game ». En équipe, en solo, découvrez toutes nos formules de jeu, pour les plus jeunes fantassins comme pour les plus aguerris des vétérans. Un seul mot d’ordre : plaisir, adrénaline, stratégie, adresse, coopération, … bon ok, ça fait un peu plus d’un mot …",
-  unit_price: 9000,
+  unit_price: 12,
   category: "ludique",
   schedule: "ouvert du lundi au dimanche sur réservation",
   min_number_of_participants: 4,
@@ -106,8 +106,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   min_age: 8,
   duration: 20,
   max_sessions: 50,
-  main_photo: "https://images.unsplash.com/photo-1558043279-a860bfe6d3b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-  second_photo: "https://images.unsplash.com/photo-1560800633-2bbfcc011fb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450732/vplp1tvkrzfbgwyho3xe.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450739/zlqyf7awp58e6tqptphq.jpg",
   address: "47 Avenue de l'Europe, 92400 Courbevoie",
   user: User.last
   },
@@ -124,7 +124,7 @@ Pourquoi choisir cette activité ?
 Un challenge inédit
 Une visite de la ville autrement
 Une activité parfaite pour les team building et les grand groupes",
-  unit_price: 1200,
+  unit_price: 16,
   category: "ludique",
   schedule: "Ouvert le Samedi de de 12h à 18h",
   min_number_of_participants: 2,
@@ -132,9 +132,9 @@ Une activité parfaite pour les team building et les grand groupes",
   min_age: 12,
   duration: 90,
   max_sessions: 20,
-  main_photo: "https://images.unsplash.com/photo-1470506926202-05d3fca84c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
-  second_photo: "https://unsplash.com/photos/CtK61qhBfyw",
-  address: "2 rue de la Boétie, Paris",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450704/mx4nvu153sa17feh4tsv.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451143/ymc9hcoprjix5gvztonf.jpg",
+  address: "2 rue du Chemin Vert, 75011 Paris",
   user: User.first
   },
 
@@ -146,7 +146,7 @@ Des lignes à en faire saliver plus d'un, un bruit unique grâce à son moteur V
 
 Un volant en cuir à base plate (à tenir fermement) : L'Audi R8 peut atteindre les 100 km/h en 4,6 secondes !
 Prêt à dompter l'aboutissement d'une marque ?",
-  unit_price: 14900,
+  unit_price: 149,
   category: "mécanique",
   schedule: "Ouvert le Samedi de de 9h à 18h",
   min_number_of_participants: 1,
@@ -154,8 +154,8 @@ Prêt à dompter l'aboutissement d'une marque ?",
   min_age: 18,
   duration: 25,
   max_sessions: 12,
-  main_photo: "https://images.unsplash.com/photo-1485906441524-ed91f8315b4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  second_photo: "https://images.unsplash.com/photo-1505739818593-e7506ebf74c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450753/jr5rxd3hjxgxmugzwzbv.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450760/yvfgmzn8ogt4kugkvjxs.jpg",
   address: "28 Avenue des Frères Lumière, 78190 Trappes",
   user: User.first
   },
@@ -167,7 +167,7 @@ Prêt à dompter l'aboutissement d'une marque ?",
 Rejoignez-nous en plein cœur de la forêt de Deauville sur un domaine de 16 hectares au volant d'un de nos 5 quatre-roues tout terrain monoplace équipés de moteurs 700cm3. Le parcours est composé d'obstacles tels les dévers, bourbiers ou autres champs d’ornières. Un parcours magnifique à tester sur ces engins motorisés, en toute sécurité !
 
 Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre endroit, dans le cadre d'un de nos programmes itinérants.",
-  unit_price: 4300,
+  unit_price: 43,
   category: "mécanique",
   schedule: "Sur réservation",
   min_number_of_participants: 1,
@@ -175,8 +175,8 @@ Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre 
   min_age: 16,
   duration: 45,
   max_sessions: 6,
-  main_photo: "https://images.unsplash.com/photo-1489731254138-5401fb834d9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  second_photo: "https://images.unsplash.com/photo-1508093303029-e802a4ddcd94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450781/ouzdziimj6lujcijaxyv.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450775/v3dzo9jfdptmfbk8qyce.jpg",
   address: "3 Avenue Pierre Brossolette, Saint-Maur-des-Fossés",
   user: User.first
   }
