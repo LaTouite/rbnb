@@ -1,6 +1,6 @@
 <div class='images'>
-  <div class='image-box main-img1'><%= cl_image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
-  <div class='image-box main-img2'><%= cl_image_tag @activity.second_photo, alt: "Le Wagon", class: "img rounded" %></div>
+  <div class='image-box main-img1'><%= cl_image_tag @activity.main_photo, alt: "Le Wagon", class: "img round"%></div>
+  <div class='image-box main-img2'><%= cl_image_tag @activity.second_photo, alt: "Le Wagon", class: "img round" %></div>
 </div>
 <div class='container main-box mt-3'>
   <div class='content-booking-box'>
@@ -58,7 +58,7 @@
     </div>
     <!-- DEBUT DU FORMULAIRE DE BOOKING -->
     <div class='booking-waranty-box'>
-      <div class='card booking-box m-3 p-3'>
+      <div class='card booking-box m-3 p-3 fcolor'>
         <%= simple_form_for [@activity, @booking] do |f| %>
           <div class='sub-book'>
             <%= f.input :number_of_participants, label: 'Participants', collection: (1..20) %>
