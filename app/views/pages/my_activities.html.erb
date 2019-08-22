@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row top-myactivities">
     <div class="col-8 chiffres-user-card">
-      <h3> Vos chiffres du mois </h3>
+      <h2> Vos chiffres du mois </h2>
       <br>
       <div class="chiffres-user">
         <div class="nb-resa">
@@ -10,6 +10,7 @@
           <% number_booking = activity.bookings.length %>
           <% sum += number_booking %>
           <%end%>
+          <i class="far fa-calendar-check"></i>
           <h5> <%= sum %> réservation(s) </h5>
           <p>Voir les détails</p>
         </div>
@@ -23,10 +24,12 @@
               <%end%>
             <% ca += ca_per_activity %>
           <%end%>
-          <h5> <%= ca %> euros gagnés </h5>
+          <i class="fas fa-piggy-bank"></i>
+          <h5> <%= ca %> euro(s) gagné(s) </h5>
           <p>Voir les détails</p>
         </div>
         <div class="nb_avis">
+          <i class="far fa-comment"></i>
           <h5> 18 avis </h5>
           <p>Voir les détails</p>
         </div>
@@ -58,9 +61,9 @@
 
   <% if current_user.activities.any? %>
     <div class="tab-pane fade show active" id="my_activities" role="tabpanel" aria-labelledby="my_activities-tab">
-      <div class="row">
+      <div class="row justify-content-start">
           <div class="col-8">
-            <h3> Vos activités en ligne </h3>
+            <h2 class="mt-3"> Vos activités en ligne </h2>
             <% @activities.each do |activity| %>
             <div class="lr-card" id="lr-card-myactivities">
               <img src= <%= activity.main_photo %> >
@@ -68,9 +71,9 @@
                     <h4> <%= activity.title %> </h4>
                     <p> <%= Geocoder.search(activity.address).first.city %> </p>
                     <ul id="see-edit-delete">
-                      <li><%= link_to "Voir les détails", activity_path(activity) %></li>
-                      <li><%= link_to "Editer", edit_activity_path(activity) %></li>
-                      <li>
+                      <li class="grey-link"><%= link_to "Voir les détails", activity_path(activity) %></li>
+                      <li class="grey-link"><%= link_to "Editer", edit_activity_path(activity) %></li>
+                      <li class="red-link">
                         <%= link_to "Supprimer", activity_path(activity),
                             method: :delete,
                             data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
@@ -80,10 +83,6 @@
             </div>
             <%end%>
           </div>
-
-          <div class="col-4">
-            <div>  </div>
-          </div>
       </div>
     </div>
   <% end %>
@@ -91,9 +90,9 @@
 <!-- Affichage "Mes bookings" -->
 <% if current_user.bookings.any? %>
   <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
-      <div class="row">
+      <div class="row justify-content-start">
           <div class="col-8">
-            <h3> Vos réservations </h3>
+            <h2> Vos réservations </h2>
             <% @bookings.each do |booking| %>
               <div class="reservation">
                 <h3> Le <%= booking.date_time.strftime("%d/%m/%Y") %> à <%= booking.date_time.strftime("%H:%M") %> </h3>
@@ -118,10 +117,6 @@
               </div>
               <%end%>
             </div>
-          </div>
-
-          <div class="col-4">
-            <div>  </div>
           </div>
       </div>
     </div>
