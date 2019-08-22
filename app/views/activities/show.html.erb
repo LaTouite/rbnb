@@ -65,9 +65,7 @@
           </div>
           <!-- DATE début -->
           <div class='sub-book'>
-            <%= simple_form_for :search, method: "get" do |f| %>
-              <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <% end %>
+              <%= f.input :date_time, as: :string, required: false, input_html: {class: "datepicker"} %>
           </div>
           <!-- DATE fin -->
           <div class='total mt-3 mb-3'>
