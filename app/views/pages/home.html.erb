@@ -45,7 +45,7 @@
 
     <div class="row hp-cards">
       <% @categories.each do |category| %>
-      <div class="p-2 col-4">
+      <div class="p-2 col-4 zoom">
 
         <%= link_to activities_path do %>
         <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category[:photo] %>)">

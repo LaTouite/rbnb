@@ -7,18 +7,27 @@
     <h2> <%=@activities.size %> chances de trouver votre bonheur </h2>
   <% end %>
   <div class="row">
-    <div class="col-7 lr-cards">
+    <div class="col-5 lr-cards">
       <% @activities.each do |activity| %>
       <div class="lr-card">
         <img src= <%= activity.main_photo %> >
+        <div class="award-tag-yellow">
+          <p>Award</p>
+          <img src="trophy2.png" alt="">
+        </div>
+        <div class="award-tag-blue">
+          <p>Top</p>
+          <p>Player</p>
+          <img src="trophy2.png" alt="">
+        </div>
           <div class="lr-card-info" id="list-activities">
             <div class="price">
               <h2> <%= activity.unit_price/100 %>€</h2>
-              <p >/pers.</p>
+              <p id="light-details">/pers.</p>
             </div>
             <div class="title-city">
-              <h3> <%= activity.title %> </h3>
-              <p class="light-details"> <%= Geocoder.search(activity.address).first.city %> </p>
+              <h2> <%= activity.title %> </h2>
+              <p id="light-details"> <%= Geocoder.search(activity.address).first.city %> </p>
             </div>
             <div class="list-details">
               <ul>
@@ -40,7 +49,7 @@
     </div>
 
 
-    <div class="col-5">
+    <div class="col-7">
       <div
   id="map"
   data-markers="<%= @markers.to_json %>"
