@@ -1,0 +1,43 @@
+.full-width-container {
+  // background: linear-gradient(0.25turn, #360033, #0b8793);
+  background: linear-gradient(0.25turn, #83a4d4, #b6fbff);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.lg-container {
+  position: absolute;
+  width: 600px;
+  margin: 170px 630px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.lg-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.form-actions input {
+  height: 50px;
+  width: 200px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: $dark-purple;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 178px;
+}
+
+.btn:hover {
+  color: white;
+}
+
+
