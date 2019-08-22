@@ -1,24 +1,74 @@
-<div class="container">
+<div class="na-container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="my_activity-tab" data-toggle="tab" href="#my_activity" role="tab" aria-controls="my_activitiy" aria-selected="true">Mon activité</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="participants-tab" data-toggle="tab" href="#participants" role="tab" aria-controls="participants" aria-selected="false">Les participants</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Mes coordonnées et horaires</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pictures-tab" data-toggle="tab" href="#pictures" role="tab" aria-controls="picture" aria-selected="false">Mes photos</a>
+    </li>
+  </ul>
+
+
   <%= simple_form_for [@activity] do |f| %>
-    <h4>Votre activité</h4>
-    <%= f.input :title, label: 'Titre' %>
-    <%= f.input :description, label: 'Description' %>
-    <%= f.input :unit_price, label: 'Prix/pers' %>
-    <%= f.input :category, label: 'Catégorie', collection: ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"] %>
-    <%= f.input :duration, label: 'Durée' %>
-    <%= f.input :max_sessions, label: 'Nb max de sessions par jour' %>
-    <h4>Les participants</h4>
-    <%= f.input :min_number_of_participants, label: 'Nb min participants' %>
-    <%= f.input :max_number_of_participants, label: 'Nb max participants' %>
-    <%= f.input :min_age, label: 'Age min' %>
-    <h4>Vos coordonnées et horaires</h4>
-    <%= f.input :address, label: 'Adresse complète' %>
-    <%= f.input :schedule, label: 'Horaires' %>
-    <h4>Vos photos</h4>
-    <%= f.input :main_photo, label: 'URL photo principale' %>
-    <%= f.input :main_photo_cache, as: :hidden %>
-    <%= f.input :second_photo, label: 'URL photo secondaire' %>
-    <%= f.input :second_photo_cache, as: :hidden %>
-     <%= f.submit "Ajouter mon activité" %>
-    <% end %>
+    <div class="tab-content" id="myTabContent">
+
+      <div class="tab-pane fade show active" id="my_activity" role="tabpanel" aria-labelledby="my_activity-tab">
+        <%= f.input :title, label: 'Titre' %>
+        <%= f.input :description, label: 'Description' %>
+        <%= f.input :category, label: 'Catégorie', collection: ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"] %>
+        <div class="details-form">
+          <%= f.input :unit_price, label: 'Prix/pers' %>
+          <%= f.input :duration, label: 'Durée (en min)', collection: [15, 30, 45, 60, 75, 90, 105, 120] %>
+          <%= f.input :max_sessions, label: 'Nb max sessions/jour' %>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="participants" role="tabpanel" aria-labelledby="participants-tab">
+        <div class="field">
+          <i class="fas fa-user"></i>
+          <%= f.input :min_number_of_participants, label: 'Nb min participants', id:'field_text' %>
+        </div>
+        <div class="field">
+          <i class="fas fa-users"></i>
+          <%= f.input :max_number_of_participants, label: 'Nb max participants', id:'field_text'  %>
+        </div>
+        <div class="field">
+          <i class="fas fa-ban"></i>
+          <%= f.input :min_age, label: 'Age min', id:'field_text'  %>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+        <div class="field">
+          <i class="fas fa-map-marker-alt"></i>
+          <%= f.input :address, label: 'Adresse complète', id:'field_text'  %>
+        </div>
+        <div class="field">
+          <i class="far fa-clock"></i>
+          <%= f.input :schedule, label: 'Horaires', id:'field_text'  %>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pictures" role="tabpanel" aria-labelledby="pictures-tab">
+        <%= f.input :main_photo, label: 'Photo principale' %>
+        <%= f.input :main_photo_cache, as: :hidden %>
+        <%= f.input :second_photo, label: 'Photo secondaire' %>
+        <%= f.input :second_photo_cache, as: :hidden %>
+        <div class="button_holder">
+          <% if @activity.id? %>
+            <%= f.submit "Modifier mon activité", class: "dark-blue-empty-button" %>
+          <% else %>
+            <%= f.submit "Ajouter mon activité", class: "dark-blue-empty-button" %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
