@@ -20,18 +20,21 @@
   <div class="strenghs">
 
     <div class="strengh">
+      <!-- <i class="far fa-heart"></i> -->
       <h3>480</h3>
-      <h3 style="color: black">partenaires</h3>
+      <h3 id="h3-strengh">partenaires</h3>
       <p>Sélectionnés par nos soins</p>
     </div>
     <div class="strengh">
+      <!-- <i class="fas fa-snowboarding"></i> -->
       <h3>1049</h3>
-      <h3 style="color: black">activités</h3>
+      <h3 id="h3-strengh">activités</h3>
       <p>Laissez vous inspirer par nos différentes catégories et vivez une expérience unique</p>
     </div>
     <div class="strengh">
+      <!-- <i class="far fa-star"></i> -->
       <h3>2038</h3>
-      <h3 style="color: black">avis certifiés</h3>
+      <h3 id="h3-strengh">avis certifiés</h3>
       <p>Uniquement les clients ayant effectué l’activité peuvent laisser un avis</p>
     </div>
 
@@ -73,7 +76,7 @@
 
     <div class="row hp-cards">
       <% @activities.each do |activity| %>
-      <div class="p-2 col-4">
+      <div class="p-2 col-4 zoom">
 
         <%= link_to activities_path do %>
         <div class="hp-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= activity.main_photo %>)">
