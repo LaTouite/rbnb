@@ -74,7 +74,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   max_sessions: 15,
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450598/f00mwt26scwrle8z1pld.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451161/gjbkqnojbpg1vwgbuzez.jpg",
-  address: "56 Corniche Président John Fitzgerald Kennedy, 13007 Marseille",
+  address: "402 chemin du Roucas Blanc, Marseille",
   user: User.last
   },
 
@@ -134,7 +134,7 @@ Une activité parfaite pour les team building et les grand groupes",
   max_sessions: 20,
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450704/mx4nvu153sa17feh4tsv.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451143/ymc9hcoprjix5gvztonf.jpg",
-  address: "2 rue de la Boétie, Paris",
+  address: "2 rue du Chemin Vert, 75011 Paris",
   user: User.first
   },
 

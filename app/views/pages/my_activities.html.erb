@@ -64,7 +64,7 @@
               <img src= <%= activity.main_photo %> >
                 <div class="lr-card-info" id="user-activities">
                     <h4> <%= activity.title %> </h4>
-                    <p> <%= activity.address %> </p>
+                    <p> <%= Geocoder.search(activity.address).first.city %> </p>
                     <ul id="see-edit-delete">
                       <li><%= link_to "Voir les détails", activity_path(activity) %></li>
                       <li><%= link_to "Editer", edit_activity_path(activity) %></li>
@@ -93,14 +93,29 @@
           <div class="col-8">
             <h3> Vos réservations </h3>
             <% @bookings.each do |booking| %>
-            <div class="lr-card">
-              <img src= <%= booking.activity.main_photo %> >
-                <div class="lr-card-info" id="user-activities">
+              <div class="reservation">
+                <h3> Le <%= booking.date_time %> </h3>
+              <div class="lr-card">
+                <img src= <%= booking.activity.main_photo %> >
+                  <div class="lr-card-info" id="user-activities">
+                    <div class="price">
+                      <p> Prix total </p>
+                      <h2> <%= booking.total_price%>€</h2>
+                    </div>
                     <h4> <%= booking.activity.title %> </h4>
-                    <p> <%= booking.activity.address %> </p>
-                </div>
+                    <p> <%= Geocoder.search(booking.activity.address).first.city %> </p>
+                    <div class="list-details">
+                      <ul>
+                        <li> <%= booking.activity.duration %> min</li>
+                        <li> <%= booking.number_of_participants %> participants</li>
+                        <li> Rappel : <%= booking.activity.min_age %>ans min.</li>
+                      </ul>
+                    </div>
+                    <%= link_to "Voir l'activité", activity_path(booking.activity) %>
+                  </div>
+              </div>
+              <%end%>
             </div>
-            <%end%>
           </div>
 
           <div class="col-4">
