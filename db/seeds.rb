@@ -40,7 +40,7 @@ User.create!(users_attributes)
 puts 'Creating activities...'
 activities_attributes = [
   {
-  title: "Découvrez le Ski Nautique",
+  title: "Ski Nautique",
   description: "Faire du ski nautique à 30 de Paris vous en rêviez ? Et bien, cela devient possible grâce à notre centre !
 Venez découvrir deux offres de ski : le ski classique, avec son stade de slalom et perfect pass et le ski de figure.
 Découvrez également les plaisirs du bi-skis : initiation ludique vous permettant d'accéder rapidement au mono-ski et au ski de figure.
@@ -58,6 +58,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450821/di1xrktli5uruhznfl7l.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450827/aeefv1ej0siup8behzoz.jpg",
   address: "15 Boulevard Charles Livon, 13007 Marseille",
+  award: true,
+  top_player: false,
   user: User.first
   },
 
@@ -75,6 +77,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450598/f00mwt26scwrle8z1pld.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451161/gjbkqnojbpg1vwgbuzez.jpg",
   address: "402 chemin du Roucas Blanc, Marseille",
+  award: false,
+  top_player: false,
   user: User.last
   },
 
@@ -92,6 +96,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450800/t6q4ibpu57cyfwbmk2sd.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450791/cibgdfpcnqhwdx487oni.jpg",
   address: "30 Cours Honoré d'Estienne d'Orves, 13001 Marseille",
+  award: false,
+  top_player: true,
   user: User.last
   },
 
@@ -109,6 +115,8 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450732/vplp1tvkrzfbgwyho3xe.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450739/zlqyf7awp58e6tqptphq.jpg",
   address: "47 Avenue de l'Europe, 92400 Courbevoie",
+  award: false,
+  top_player: false,
   user: User.last
   },
 
@@ -135,6 +143,8 @@ Une activité parfaite pour les team building et les grand groupes",
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450704/mx4nvu153sa17feh4tsv.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566451143/ymc9hcoprjix5gvztonf.jpg",
   address: "2 rue du Chemin Vert, 75011 Paris",
+  award: true,
+  top_player: false,
   user: User.first
   },
 
@@ -157,11 +167,13 @@ Prêt à dompter l'aboutissement d'une marque ?",
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450753/jr5rxd3hjxgxmugzwzbv.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450760/yvfgmzn8ogt4kugkvjxs.jpg",
   address: "28 Avenue des Frères Lumière, 78190 Trappes",
+  award: false,
+  top_player: true,
   user: User.first
   },
 
       {
-  title: "Location et randonnée en quad",
+  title: "Randonnée en quad",
   description: "Si vous êtes à a recherche de loisirs en nature, locations et randonnées en quad à Deauville sont ce qu'il vous faut ! Des sensations fortes et de l'adrénaline vous attendent lors de cette balade en plein air !
 
 Rejoignez-nous en plein cœur de la forêt de Deauville sur un domaine de 16 hectares au volant d'un de nos 5 quatre-roues tout terrain monoplace équipés de moteurs 700cm3. Le parcours est composé d'obstacles tels les dévers, bourbiers ou autres champs d’ornières. Un parcours magnifique à tester sur ces engins motorisés, en toute sécurité !
@@ -178,6 +190,8 @@ Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre 
   remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450781/ouzdziimj6lujcijaxyv.jpg",
   remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566450775/v3dzo9jfdptmfbk8qyce.jpg",
   address: "3 Avenue Pierre Brossolette, Saint-Maur-des-Fossés",
+  award: true,
+  top_player: false,
   user: User.first
   }
 ]
