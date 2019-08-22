@@ -1,5 +1,5 @@
 import "bootstrap";
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 
@@ -24,6 +24,6 @@ initMapbox();
 const form = document.querySelector("#new_booking");
 if (form) {
   form.addEventListener("submit", (event) => {
-    alert("Votre réservation est bien prise en compte ! Merci !")
+    alert("Votre réservation est bien prise en compte ! Merci !");
   });
 }
