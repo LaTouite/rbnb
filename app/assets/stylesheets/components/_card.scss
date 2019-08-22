@@ -34,6 +34,7 @@
   margin-top: -94px;
   margin-left: -14px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border: 1px solid $yellow-p;
   // padding-left: 18px;
   // display: flex;
 }
@@ -56,6 +57,7 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   display: table-column;
   text-align: center;
+  border: 1px solid $blue-p;
 }
 
 .award-tag-blue p {

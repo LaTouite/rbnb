@@ -61,7 +61,11 @@
 
   <% if current_user.activities.any? %>
     <div class="tab-pane fade show active" id="my_activities" role="tabpanel" aria-labelledby="my_activities-tab">
+
+      <div class="row">
+
       <div class="row justify-content-start">
+
           <div class="col-8">
             <h2 class="mt-3"> Vos activités en ligne </h2>
             <% @activities.each do |activity| %>
