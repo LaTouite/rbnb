@@ -1,0 +1,26 @@
+.na-container {
+  // position: absolute;
+  // width: 600px;
+  // margin: 170px 630px;
+  margin-top: 20px;
+  margin: auto;
+  width: 60%;
+  height: 70vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.details-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.details-form .form-control {
+  flex-grow: 1;
+}
+
+#activity_schedule {
+  width: 70%;
+}

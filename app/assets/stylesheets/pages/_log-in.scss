@@ -1,15 +1,19 @@
 .full-width-container {
   // background: linear-gradient(0.25turn, #360033, #0b8793);
   background: linear-gradient(0.25turn, #83a4d4, #b6fbff);
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  // width: 100vw;
+  height: 90vh;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lg-container {
-  position: absolute;
-  width: 600px;
-  margin: 170px 630px;
+  // position: absolute;
+  // width: 600px;
+  // margin: 170px 630px;
+  height: 500px;
   background-color: white;
   border-radius: 10px;
   padding: 30px;
