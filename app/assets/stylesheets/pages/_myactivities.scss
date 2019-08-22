@@ -5,8 +5,7 @@
 }
 
 .chiffres-user-card {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $light-border;
   padding: 25px;
 }
 
@@ -28,6 +27,7 @@
 
 #see-edit-delete {
   padding-top: 100px;
+  text-decoration: underline;
 }
 
 #btn-dark-blue {
@@ -52,10 +52,38 @@
 }
 
 #lr-card-myactivities {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .reservation {
   margin-top: 30px;
 }
+
+.ajout-dashboard {
+  position: fixed;
+  left: 80%;
+  top: 14%;
+  height: 20vh;
+  z-index: 10000;
+  transform: translateX(-50%);
+}
+
+.ajout-dashboard .dark-blue-empty-button {
+  margin-bottom: 20px;
+  margin-left: 60px;
+  }
+
+ .ajout-dashboard .dark-button {
+  margin-left: 60px;
+  }
+
+  i {
+    font-size : 40px;
+    padding-bottom: 20px;
+    color: $dark-blue;
+  }
+
+  .nb-resa, .chiffre-affaires, .nb_avis {
+    text-align: center;
+  }
 
