@@ -98,7 +98,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
     {
   title: "Laser Game Xmax",
   description: "LE PREMIER Laser Game DU 92 ! Un labyrinthe de 480 m2 sur 3 niveaux où vous serez au coeur du jeu ! Le Laser Game vous propose aussi un bar lounge, une salle de jeux (avec baby-foot, palets, basket,…) et une salle « after game ». En équipe, en solo, découvrez toutes nos formules de jeu, pour les plus jeunes fantassins comme pour les plus aguerris des vétérans. Un seul mot d’ordre : plaisir, adrénaline, stratégie, adresse, coopération, … bon ok, ça fait un peu plus d’un mot …",
-  unit_price: 90,
+  unit_price: 12,
   category: "ludique",
   schedule: "ouvert du lundi au dimanche sur réservation",
   min_number_of_participants: 4,
@@ -124,7 +124,7 @@ Pourquoi choisir cette activité ?
 Un challenge inédit
 Une visite de la ville autrement
 Une activité parfaite pour les team building et les grand groupes",
-  unit_price: 12,
+  unit_price: 16,
   category: "ludique",
   schedule: "Ouvert le Samedi de de 12h à 18h",
   min_number_of_participants: 2,
