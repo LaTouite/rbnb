@@ -1,7 +1,7 @@
 <div class='container main-box mt-3'>
   <div class='images'>
-    <div class='image-box'><%= image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
-    <div class='image-box'><%= image_tag @activity.second_photo, alt: "Le Wagon", class: "img rounded" %></div>
+    <div class='image-box'><%= cl_image_tag @activity.main_photo, alt: "Le Wagon", class: "img rounded"%></div>
+    <div class='image-box'><%= cl_image_tag @activity.second_photo, alt: "Le Wagon", class: "img rounded" %></div>
   </div>
   <div class='content-booking-box'>
     <div class='content-box'>
@@ -9,7 +9,7 @@
         <div class='title-price-box'>
           <h2><%= @activity.title.capitalize %></h2>
           <div>
-            <h2 class='price'><%= @activity.unit_price / 100 %>€</h2>
+            <h2 class='price'><%= @activity.unit_price %>€</h2>
             <p id='light-details'>/personne</p>
           </div>
         </div>
