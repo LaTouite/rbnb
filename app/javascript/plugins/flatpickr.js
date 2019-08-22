@@ -1,4 +1,9 @@
-import flatpickr from "flatpickr"
-import "flatpickr/dist/flatpickr.min.css" // Note this is important!
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
-flatpickr(".datepicker", {})
+flatpickr(".datepicker", {
+  inline: true,
+  enableTime: true,
+  dateFormat: "Y-m-d H:i",
+  minDate: "today"
+})
