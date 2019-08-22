@@ -37,36 +37,49 @@
     </div>
    </div>
 
-
-  <div class="row">
-    <div class="col-8">
-      <h3> Vos activités en ligne </h3>
-      <% @activities.each do |activity| %>
-      <div class="lr-card">
-        <img src= <%= activity.main_photo %> >
-          <div class="lr-card-info" id="user-activities">
-              <h4> <%= activity.title %> </h4>
-              <p> <%= activity.address %> </p>
-              <ul id="see-edit-delete">
-                <li><%= link_to "Voir les détails", activity_path(activity) %></li>
-                <li><%= link_to "Editer", edit_activity_path(activity) %></li>
-                <li>
-                  <%= link_to "Supprimer", activity_path(activity),
-                      method: :delete,
-                      data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
-                </li>
-              </ul>
+   <ul class="nav nav-tabs">
+    <li class="active"><a href="#my_activities" data-toggle="tab">Mes activités</a></li>
+    <li><a href="#my_bookings" data-toggle="tab">Mes réservations</a></li>
+  </ul>
+<!-- Tab panes -->
+  <div class="tab-content">
+    <div id="my_activities" class="tab-pane">
+      <div class="row">
+        <div class="col-8">
+          <h3> Vos activités en ligne </h3>
+          <% @activities.each do |activity| %>
+          <div class="lr-card">
+            <img src= <%= activity.main_photo %> >
+              <div class="lr-card-info" id="user-activities">
+                  <h4> <%= activity.title %> </h4>
+                  <p> <%= activity.address %> </p>
+                  <ul id="see-edit-delete">
+                    <li><%= link_to "Voir les détails", activity_path(activity) %></li>
+                    <li><%= link_to "Editer", edit_activity_path(activity) %></li>
+                    <li>
+                      <%= link_to "Supprimer", activity_path(activity),
+                          method: :delete,
+                          data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
+                    </li>
+                  </ul>
+              </div>
           </div>
+          <%end%>
+        </div>
+
+        <div class="col-4">
+          <div>  </div>
+        </div>
       </div>
-      <%end%>
     </div>
 
-
-    <div class="col-4">
-      <div>  </div>
     </div>
-  </div>
-</div>
+
+    <div id="my_bookings" class="tab-pane">
+
+    </div>
+
+    </div>
 
 
 
