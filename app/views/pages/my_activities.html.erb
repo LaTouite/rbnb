@@ -35,12 +35,19 @@
         </div>
       </div>
     </div>
+
     <div class="col-4 ajout-dashboard">
-        <div class="dark-blue-empty-button"> <a href="#"> Modifier ma fiche partenaire </a> </div>
-        <div class="dark-blue-empty-button"> <%=link_to "Réserver une activité", activities_path %> </div>
-        <div class="dark-button"> <%=link_to "Ajouter une activité", new_activity_path %> </div>
+      <div class="dark-blue-empty-button">
+        <a href="#"> Modifier ma fiche partenaire </a>
+      </div>
+      <div class="dark-blue-empty-button">
+        <%=link_to "Réserver une activité", activities_path %>
+      </div>
+      <div class="dark-button">
+        <%=link_to "Ajouter une activité", new_activity_path %>
+      </div>
     </div>
-   </div>
+  </div>
 
 <!-- Si activités et bookings -->
 
@@ -59,49 +66,51 @@
 <!-- Affichage "Mes activités" -->
   <div class="tab-content" id="myTabContent">
 
-  <% if current_user.activities.any? %>
-    <div class="tab-pane fade show active" id="my_activities" role="tabpanel" aria-labelledby="my_activities-tab">
-
-      <div class="row">
-
-      <div class="row justify-content-start">
-
+    <% if current_user.activities.any? %>
+      <div class="tab-pane fade show active" id="my_activities" role="tabpanel" aria-labelledby="my_activities-tab">
+        <div class="row">
           <div class="col-8">
             <h2 class="mt-3"> Vos activités en ligne </h2>
             <% @activities.each do |activity| %>
-            <div class="lr-card" id="lr-card-myactivities">
-              <img src= <%= activity.main_photo %> >
+              <div class="lr-card" id="lr-card-myactivities">
+                <img src= <%= activity.main_photo %> >
                 <div class="lr-card-info" id="user-activities">
-                    <h4> <%= activity.title %> </h4>
-                    <p> <%= Geocoder.search(activity.address).first.city %> </p>
-                    <ul id="see-edit-delete">
-                      <li class="grey-link"><%= link_to "Voir les détails", activity_path(activity) %></li>
-                      <li class="grey-link"><%= link_to "Editer", edit_activity_path(activity) %></li>
-                      <li class="red-link">
-                        <%= link_to "Supprimer", activity_path(activity),
-                            method: :delete,
-                            data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
-                      </li>
-                    </ul>
+                  <h4> <%= activity.title %> </h4>
+                  <p> <%= Geocoder.search(activity.address).first.city %> </p>
+                  <ul id="see-edit-delete">
+                    <li class="grey-link">
+                      <%= link_to "Voir les détails", activity_path(activity) %>
+                    </li>
+                    <li class="grey-link">
+                      <%= link_to "Editer", edit_activity_path(activity) %>
+                    </li>
+                    <li class="red-link">
+                      <%= link_to "Supprimer", activity_path(activity),
+                          method: :delete,
+                          data: { confirm: "Etes vous sûr de vouloir supprimer cette activité ?" } %>
+                    </li>
+                  </ul>
                 </div>
-            </div>
+              </div>
             <%end%>
+           <!--  </div> -->
           </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 
 <!-- Affichage "Mes bookings" -->
-<% if current_user.bookings.any? %>
-  <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
-      <div class="row justify-content-start">
+    <% if current_user.bookings.any? %>
+      <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+        <div class="row">
           <div class="col-8">
             <h2> Vos réservations </h2>
             <% @bookings.each do |booking| %>
               <div class="reservation">
-                <h3> Le <%= booking.date_time.strftime("%d/%m/%Y") %> à <%= booking.date_time.strftime("%H:%M") %> </h3>
-              <div class="lr-card" id="lr-card">
-                <img src= <%= booking.activity.main_photo %> >
+                <h3> Le <%= booking.date_time.strftime("%d/%m/%Y") %> à <%= booking.date_time.strftime("%H:%M") %>
+                </h3>
+                <div class="lr-card" id="lr-card">
+                  <img src= <%= booking.activity.main_photo %> >
                   <div class="lr-card-info" id="user-activities">
                     <div class="price">
                       <p> Prix total </p>
@@ -118,14 +127,14 @@
                     </div>
                     <%= link_to "Voir l'activité", activity_path(booking.activity), id:"btn-dark-blue" %>
                   </div>
-              </div>
+                </div>
               <%end%>
-            </div>
+              </div>
           </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 
-</div>
+  </div>
 
 
