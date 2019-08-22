@@ -29,3 +29,33 @@
 #see-edit-delete {
   padding-top: 100px;
 }
+
+#btn-dark-blue {
+  display: inline-block;
+  border: 1px solid $dark-blue;
+  border-radius: 5px;
+  padding: 5px 25px;
+  position: absolute;
+  bottom: 20px; right: 20px;
+  color: $dark-blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#btn-dark-blue:hover {
+  color: white;
+  background-color: $dark-blue;
+}
+
+#myTab {
+  margin-bottom : 40px;
+}
+
+#lr-card-myactivities {
+  margin-top: 30px;
+}
+
+.reservation {
+  margin-top: 30px;
+}
+
