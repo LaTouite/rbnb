@@ -16,7 +16,9 @@
     <%= f.input :schedule, label: 'Horaires' %>
     <h4>Vos photos</h4>
     <%= f.input :main_photo, label: 'URL photo principale' %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :second_photo, label: 'URL photo secondaire' %>
+    <%= f.input :photo_cache, as: :hidden %>
      <%= f.submit "Ajouter mon activité" %>
     <% end %>
   </div>
