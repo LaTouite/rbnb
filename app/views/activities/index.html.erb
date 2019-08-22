@@ -11,13 +11,16 @@
       <% @activities.each do |activity| %>
       <div class="lr-card">
         <%= cl_image_tag activity.main_photo %>
-        <div class="award-tag-yellow">
-          <p>Award</p>
-        </div>
-        <div class="award-tag-blue">
-          <p>Players</p>
-          <p>choice</p>
-        </div>
+        <% if activity.award %>
+          <div class="award-tag-yellow">
+            <p>Award</p>
+          </div>
+        <% elsif activity.top_player %>
+          <div class="award-tag-blue">
+            <p>Players</p>
+            <p>choice</p>
+          </div>
+        <% end %>
           <div class="lr-card-info" id="list-activities">
             <div class="price">
               <h2> <%= activity.unit_price %>€</h2>
