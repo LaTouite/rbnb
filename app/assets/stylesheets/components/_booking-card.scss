@@ -97,9 +97,24 @@
   border-radius: 5px;
 }
 
-.show-map {
-  height: 400px;
-  width: 100%;
-  display: block;
-  border: 1px black solid;
+.one-map {
+  height: 300px !important;
+  margin: 0px !important;
+}
+
+.each-info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 150px;
+}
+
+.each-logo {
+  font-size: 30px;
+  padding-bottom: 10px;
+  color: $dark-blue;
+}
+
+.little-logo {
+  color: $dark-blue;
 }
