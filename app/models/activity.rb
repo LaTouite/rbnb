@@ -5,6 +5,9 @@ class Activity < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  mount_uploader :main_photo, PhotoUploader
+  mount_uploader :second_photo, PhotoUploader
+
   CATEGORIES = ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"]
 
   validates :title, presence: true
