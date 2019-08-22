@@ -38,3 +38,18 @@
   font-weight: bold;
   font-size: 18px;
 }
+
+// css navbar des tabs
+
+#myTab {
+  border: none;
+}
+
+#myTab li {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid $dark-grey;
+  padding: 10px;
+  color: $dark-blue;
+}
