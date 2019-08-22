@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "nav-transparent" if params[:controller] == "pages" && params[:action] == "home" %>">
   <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "https://www.logoground.com/uploads/2017105792017-09-232884997lg-ortegagraphics-parasol-umbrella-sun.jpg" %>
+    <%= image_tag "purpleplayy.png" %>
     <% end %>
 
     <% if params[:controller] == "activities" && params[:action] == "index" %>
@@ -10,7 +10,7 @@
           class: "form-control",
           placeholder: "Tapez votre recherche ici"
         %>
-        <%= submit_tag "Search", class: "dark-button" %>
+        <%= submit_tag "Rechercher", class: "dark-button" %>
       <% end %>
     <% end %>
 

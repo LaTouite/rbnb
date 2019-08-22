@@ -5,8 +5,14 @@
 }
 
 .lr h2 {
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
+  color: $dark-blue;
+  margin-bottom: 50px;
+  margin-left: 20px
+}
+
+.lr-card p {
+  line-height: 20px;
 }
 
 .hp-card {
@@ -14,7 +20,74 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
+  position: relative;
 }
+
+.award-tag-yellow {
+  position: absolute;
+  background-color: $yellow-back;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  padding-left: 18px;
+  padding-top: 28px;
+  margin-top: -94px;
+  margin-left: -14px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  // padding-left: 18px;
+  // display: flex;
+}
+
+.award-tag-yellow p {
+  color: $yellow-p;
+  font-weight: 500;
+}
+
+.award-tag-blue {
+  position: absolute;
+  background-color: $blue-back;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  padding-left: 0px;
+  padding-top: 19px;
+  margin-top: -94px;
+  margin-left: -14px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: table-column;
+  text-align: center;
+}
+
+.award-tag-blue p {
+  color: $blue-p;
+  font-weight: 500;
+}
+
+
+
+
+
+// .award-tag p {
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .hp-card:hover {
+//   transform: scale(1.05);
+// }
+
+// #card-title:hover {
+//   transform: scale(1.05);
+// }
+
+.zoom:hover {
+  transform: scale(1.01);
+}
+
+// .lr-card:hover {
+//   transform: scale(1.01);
+// }
+
 
 #card-title {
   margin-top: -35px;
@@ -28,16 +101,17 @@
   height: 230px;
   width: 100%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 20px rgba(0,0,0, 0.05);
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 28px;
   border-radius: 5px;
+  border: 1px solid $light-border;
 }
 
 .lr-card img {
   height: 100%;
-  width: 230px;
+  width: 270px;
   object-fit: cover;
   border-left-radius: 5px;
 }
@@ -103,11 +177,36 @@
 .price h2, p {
   margin: 0px;
   letter-spacing: 0px;
-  line-height: 1;
+  // line-height: 1;
 }
 
 .price h2 {
   color: $dark-blue;
+}
+
+.title-city h2 {
+  letter-spacing: 0px;
+  font-size: 25px;
+  color: $dark-grey;
+  margin-bottom: 0px;
+  margin-left: 0px
+}
+
+.container-fluid {
+  margin-top: 50px;
+  width: 100%;
+}
+
+
+.lr-cards {
+  // padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 0px;
+}
+
+.list-details li {
+  font-weight: 500;
+  color: $dark-grey;
 }
 
 
@@ -128,3 +227,5 @@
 // .card-product .card-product-infos {
 //   padding: 16px;
 // }
+
+
