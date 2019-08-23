@@ -164,5 +164,53 @@
 // }
 
 .flatpickr-months .flatpickr-month {
-  background: $light-purple;
+  background: $light-purple !important;
 }
+
+.flatpickr-weekdays {
+  background: $light-purple !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background: $light-purple !important;
+  color: $dark-grey !important;
+}
+
+span.flatpickr-weekday {
+  background: $light-purple !important;
+}
+
+// .flatpickr-current-month input.cur-year {
+//   color: $dark-grey !important;
+// }
+
+// .numInputWrapper span.arrowDown {
+//   color: $dark-grey !important;
+// }
+
+.flatpickr-month input {
+  color: $dark-grey !important;
+}
+
+.flatpickr-month div {
+  color: $dark-grey !important;
+}
+
+.flatpickr-month span {
+  color: $dark-grey !important;
+}
+
+.flatpickr-month svg {
+  color: $dark-grey !important;
+}
+
+.flatpickr-month select {
+  color: $dark-grey !important;
+}
+
+.flatpickr-month option {
+  color: $dark-grey !important;
+}
+
+
+
