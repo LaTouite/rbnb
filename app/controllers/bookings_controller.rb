@@ -5,13 +5,19 @@ class BookingsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @booking.activity = @activity
 
-    redirect_to activity_path(@activity)
-
-    # if @booking.save
-    #   redirect_to activity_path(@activity)
-    # else
-    #   render "activities/show"
-    # end
+  # Si la reservation est validee
+    if @booking.save
+      redirect_to activity_path(@activity)
+  # Si la reservation n'est pas validee
+    else
+    # On redefinit les markers pour la map
+    # car on est redirigé vers une instance de booking
+    # (on quitte donc le controller de activities
+    # pour aller dans le controller de bookings)
+      @markers = [ {lat: @activity.latitude,
+        lng: @activity.longitude} ]
+      render "activities/show"
+    end
   end
 
   private
