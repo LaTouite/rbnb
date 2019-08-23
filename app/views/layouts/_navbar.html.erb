@@ -1,6 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "nav-transparent" if params[:controller] == "pages" && params[:action] == "home" %>">
   <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "purpleplayy.png" %>
+    <% if params[:action] == "home" %>
+      <%= image_tag "purpleplayylight.png" %>
+    <% else %>
+      <%= image_tag "purpleplayywhite.png" %>
+    <% end %>
     <% end %>
 
     <% if params[:controller] == "activities" && params[:action] == "index" %>
