@@ -10,23 +10,21 @@
     <div class="col-7 lr-cards">
       <% @activities.each do |activity| %>
       <div class="lr-card">
-        <!-- new div -->
+<!-- DIV PHOTO BG + TROPHEE (début) -->
         <div class="cardp" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path activity.main_photo, height: 300, width: 400, crop: :fill; %>')">
-        <!-- new div -->
           <% if activity.award %>
             <div class="award">
               <!-- <i class="fas fa-medal trophy trophy-award"></i> -->
               <!-- <i class="fas fa-award trophy trophy-award"></i> -->
               <i class="fas fa-trophy trophy trophy-award"></i>
             </div>
-          <% elsif activity.top_player %>
-            <div class="award">
+          <%# elsif activity.top_player %>
+          <!-- <div class="award">
               <i class="far fa-play-circle trophy players"></i>
-            </div>
+            </div> -->
           <% end %>
-        <!-- new div -->
         </div>
-        <!-- new div -->
+<!-- DIV PHOTO BG + TROPHEE (fin) -->
           <div class="lr-card-info" id="list-activities">
             <div class="price">
               <h2> <%= activity.unit_price %>€</h2>
