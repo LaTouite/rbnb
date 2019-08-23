@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
   # Si la reservation est validee
     if @booking.save
-      redirect_to activity_path(@activity)
+      redirect_to my_activities_path
   # Si la reservation n'est pas validee
     else
     # On redefinit les markers pour la map
