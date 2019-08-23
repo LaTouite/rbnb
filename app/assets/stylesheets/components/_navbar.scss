@@ -39,6 +39,7 @@
   font-size: 18px;
 }
 
+
 // css navbar des tabs
 
 #myTab {
@@ -53,3 +54,21 @@
   padding: 10px;
   color: $dark-blue;
 }
+
+.navbar-collapse {
+  position: relative;
+}
+
+// .notif {
+//   position: absolute;
+//   z-index: 1;
+//   height: 20px;
+//   width: 20px;
+//   border-radius: 20px;
+//   background-color: #E11313;
+//   color: white;
+//   text-align: center;
+//   font-weight: bold;
+//   margin-left: 171px;
+//   margin-top: -21px;
+// }

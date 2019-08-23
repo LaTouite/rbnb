@@ -66,8 +66,8 @@
 
 .booking-waranty-box {
   position: sticky;
-  top: 0;
-  width: 35%;
+  padding: 0px;
+  top: 0px;
 }
 
 .total, .content-booking-box {
@@ -79,7 +79,12 @@
   width: 100%;
 }
 
-.total-price {
+// .total-price {
+//   color: $dark-purple;
+// }
+
+.total h6 {
+  font-size: 27px;
   color: $dark-purple;
 }
 
@@ -133,11 +138,11 @@
 
 .round{
   border-radius: 5px;
-  border: 1px solid black;
 }
 
 .act-description p {
   font-size: 16px;
+  text-align: justify;
 }
 
 .fcolor {
