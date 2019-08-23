@@ -17,6 +17,10 @@
   justify-content: space-around;
 }
 
+.form-control {
+  border-radius: 6px;
+}
+
 .details-form .form-control {
   flex-grow: 1;
 }
@@ -80,7 +84,7 @@
 //   font-weight: bold;
 // }
 
-#new_activity .dark-blue-empty-button {
+.simple_form .dark-blue-empty-button {
   // height: 50px;
   // width: 288px;
   border-radius: 8px;
@@ -94,14 +98,16 @@
   padding-bottom: 9px;
 }
 
-// #new_activity .dark-blue-empty-button:hover {
-//   color: white;
-// }
-
-#new_activity .dark-blue-empty-button:hover {
+.simple_form .dark-blue-empty-button:hover {
   color: white;
   font-weight: bold;
   background-color: $dark-purple-hover;
 }
+
+// #new_activity .dark-blue-empty-button:hover {
+//   color: white;
+// }
+
+
 
 
