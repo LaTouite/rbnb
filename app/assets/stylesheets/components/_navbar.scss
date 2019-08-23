@@ -40,9 +40,37 @@
   font-size: 18px;
 }
 
+
+// css navbar des tabs
+
+#myTab {
+  border: none;
+}
+
 .navbar-collapse {
   position: relative;
 }
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: $dark-blue;
+}
+
+.nav-item a {
+    color: $dark-blue;
+    text-decoration: none;
+}
+
+.nav-tabs .nav-link {
+    border: 0px solid $dark-blue;
+    border-bottom: 1px solid $dark-blue;
+    &:hover {
+      border: 0px solid $dark-blue;
+      border-bottom: 3px solid $dark-blue;
+    }
+  }
+
+
 
 // .notif {
 //   position: absolute;
