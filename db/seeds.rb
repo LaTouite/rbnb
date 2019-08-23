@@ -60,7 +60,7 @@ Une fois la combinaison mise, vous pouvez vivre votre activité à fond et déco
   address: "15 Boulevard Charles Livon, 13007 Marseille",
   award: true,
   top_player: false,
-  user: User.first
+  user: User.last
   },
 
     {
@@ -145,7 +145,7 @@ Une activité parfaite pour les team building et les grand groupes",
   address: "2 rue du Chemin Vert, 75011 Paris",
   award: true,
   top_player: false,
-  user: User.first
+  user: User.last
   },
 
       {
@@ -169,7 +169,7 @@ Prêt à dompter l'aboutissement d'une marque ?",
   address: "28 Avenue des Frères Lumière, 78190 Trappes",
   award: false,
   top_player: true,
-  user: User.first
+  user: User.last
   },
 
       {
@@ -192,8 +192,171 @@ Vous avez aussi la possibilité de vous offrir une balade en quad dans un autre 
   address: "3 Avenue Pierre Brossolette, Saint-Maur-des-Fossés",
   award: true,
   top_player: false,
+  user: User.last
+  },
+
+        {
+  title: "Massage californien",
+  description:"• Réalisé sur l'ensemble du corps
+• Produits utilisés : Huile de noisette
+• Manœuvres douces et lentes d'effleurages enveloppants et de lissages fluides
+• Bienfaits : Sentiment de bien-être intense | Harmonie du corps et de l’esprit",
+  unit_price: 80,
+  category: "bien-être",
+  schedule: "du mardi au dimanche, 11h à 17h" ,
+  min_number_of_participants: 1,
+  max_number_of_participants: 2,
+  min_age: 18,
+  duration: 75,
+  max_sessions: 8,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559173/GettyImages-Woman-Massage-NKS_Imagery_krk3fk.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559176/massage_centers_in_sharjah_xuaqs4.jpg",
+  address: "156 Rue Oberkampf 75011 Paris",
+  award: true,
+  top_player: false,
   user: User.first
-  }
+  },
+
+          {
+  title: "Relooking vestimentaire",
+  description: "Cours d'auto-coiffage
+• Apprentissage ludique des techniques et gestes de coiffage
+• Conseils sur les produits et outils à utiliser selon votre profil
+
+Accompagnement shopping
+• Une session shopping sur mesure
+• Conseils sur les vêtements à privilégier pour mettre en valeur votre silhouette
+• Les boutiques sont choisies en fonction de votre budget
+• Conseils pour optimiser votre garde-robe en fonction de votre personnalité et de votre style de vie",
+  unit_price: 130,
+  category: "bien-être",
+  schedule: "Sur rendez-vous",
+  min_number_of_participants: 1,
+  max_number_of_participants: 1,
+  min_age: 16,
+  duration: 120,
+  max_sessions: 4,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559257/relooking-complet-femme-annecy-74_ctiumx.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559277/woman-clothes-shopping_gmnno7.jpg",
+  address: "106 Rue de Turenne 75003 Paris",
+  award: false,
+  top_player: false ,
+  user: User.first
+  },
+
+          {
+  title: "Défi œnologique",
+  description: "Participez à un atelier œnologique où les gages sont au rendez-vous. Vous pourrez alors faire des jeux d'équipe, découvrir la ville de Paris, apprendre les étapes de la dégustation et déguster et faire des quizz.",
+  unit_price: 60,
+  category: "fin gourmet",
+  schedule: "Sur rendez-vous",
+  min_number_of_participants: 4,
+  max_number_of_participants: 10,
+  min_age: 10,
+  duration: 90,
+  max_sessions: 1,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559194/degustation-de-vin-francais_lrfxox.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559199/degustation-de-vin-dans_t89vs6.jpg",
+  address: "16 rue Wagram, 75016 Paris",
+  award: true,
+  top_player: false,
+  user: User.last
+  },
+
+          {
+  title: "Initiation à l'horlogerie",
+  description: "Glissez-vous dans le peau d'un horloger le temps de quelques heures en famille, entre amis ou en solo.
+
+Ce centre vous propose une véritable initiation horlogère avec plusieurs étapes : démontage, nettoyage, remontage, lubrification, réglage d’un mouvement mécanique suisse ETA et son contrôle via un chrono-comparateur.
+
+Ces ateliers d'initiation à l'horlogerie sont dispensés à Paris mais aussi en Province et à l'étranger.
+
+Cette activité est idéale pour une sortie en famille ou entre amis. ",
+  unit_price: 120,
+  category: "loisirs créatifs",
+  schedule: "Sur rendez-vous",
+  min_number_of_participants: 2,
+  max_number_of_participants: 6,
+  min_age: 16,
+  duration: 120,
+  max_sessions: 1,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559568/Operateur_en_horlogerie_Header_01_h5ok1w.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559556/242f56a4b4_117964_mecanisme-horlogerie-suisse_gyfqvv.jpg",
+  address: "32 rue mouffetard, 75005 Paris",
+  award: false,
+  top_player: false,
+  user: User.last
+  },
+
+            {
+  title: "Dégustation de bières",
+  description: "Oubliez les bières de grande distribution et venez tenter l'aventure des bières artisanales avec cet atelier !
+
+Cet atelier s’adresse aux amateurs, aux curieux mais aussi à celles et ceux qui pensent ne pas aimer la bière. Au cours de la séance de dégustation de bière, vous découvrirez cinq bières artisanales, répondant à différents styles (stout, blanche, saison…) et différentes cultures (Angleterre, Belgique, USA…), confectionnées avec amour et talent par des brasseurs français.
+
+Vous en apprendrez plus sur le brassage et les éléments qui composent la bière : Le malt – Le houblon – La levure.
+
+Venez redécouvrir la bière grâce à cet atelier de découverte de bières artisanales.",
+  unit_price: 40,
+  category: "fin gourmet",
+  schedule: "Tous jours, de 18h à 22h",
+  min_number_of_participants: 4,
+  max_number_of_participants: 10,
+  min_age: 18,
+  duration: 60,
+  max_sessions: 2,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559227/barcelone_degustation_bieres_artisanales_bjk5gb.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559234/image_whjk89.jpg",
+  address: "27 Rue des Jacobins, Clermont-Ferrand",
+  award: true,
+  top_player: false,
+  user: User.last
+  },
+
+            {
+  title: "Simulateur chute libre",
+  description: "La chute libre en soufflerie est probablement l’une des activités les plus originales que vous pouvez trouver en France. C'est un concept unique au monde, conçu et réalisé par des ingénieurs français.
+
+Accessible dès 8 ans, peu importe votre niveau (pas besoin d’être un « grand sportif ») vous pouvez effectuer cette activité en toute sécurité. Des sensations fortes immédiates !",
+  unit_price: 50,
+  category: "sports sensations",
+  schedule: "Du mercredi au vendredi de 17h à 00h Le Samedi de 14h à 00h Le Dimanche de 14h à 19h",
+  min_number_of_participants: 1,
+  max_number_of_participants: 4,
+  min_age: 8,
+  duration: 15,
+  max_sessions: 12,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559707/chute-libre-simulateur-madrid-e1494242916369_jr2qcp.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559724/chute-libre-indoor-ifly-lyon-fly1_jjfu1b.jpg",
+  address: "72 Rue Lecocq, Bordeaux",
+  award: false,
+  top_player: false,
+  user: User.last
+  },
+
+            {
+  title: "Atelier cocktails",
+  description: "Découvrez ce bar à cocktails à l'ambiance années folles implanté à deux pas de République !
+
+Ici on vous propose des ateliers de mixologie qui conviendront aussi bien aux entreprises qu'aux particuliers.
+
+Vous deviendrez donc, pendant 1h30, un véritable barman.
+Après une description des ingrédients, des spiritueux, des décorations, du matériel et une démonstration par le barman, les participants réalisent trois cocktails selon leurs goûts et envies, avant de les déguster, accompagnés de petits assortiments salés. ",
+  unit_price: 60,
+  category: "fin gourmet",
+  schedule: "Du mardi au samedi de 17h à 0h" ,
+  min_number_of_participants: 1,
+  max_number_of_participants: 8,
+  min_age: 18,
+  duration: 90,
+  max_sessions: 2,
+  remote_main_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559149/80274_w1024h768c1cx2378cy1278cxt0cyt0cxb4799cyb3199_piavco.jpg",
+  remote_second_photo_url: "https://res.cloudinary.com/dvc6dt55q/image/upload/v1566559150/SatsumaFeature_h86hsn.jpg",
+  address: "54 Rue Gustave Delory, Lille",
+  award: false,
+  top_player: false,
+  user: User.last
+  },
 ]
 Activity.create!(activities_attributes)
 puts 'Finished!'
