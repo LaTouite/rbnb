@@ -8,7 +8,7 @@ class Activity < ApplicationRecord
   mount_uploader :main_photo, PhotoUploader
   mount_uploader :second_photo, PhotoUploader
 
-  CATEGORIES = ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs"]
+  CATEGORIES = ["sports sensations", "sports nautiques", "mécanique", "ludique", "activités extérieures", "bien-être", "loisirs créatifs", "fin gourmet", "danse"]
 
   validates :title, presence: true
   validates :description, presence: true
