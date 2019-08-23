@@ -31,7 +31,11 @@ const theDate = document.querySelector("#booking_date_time");
 if (form) {
   form.addEventListener("submit", (event) => {
     if ((participantsNb.value >= 1) && (theDate.value != '')) {
-      alert("Votre réservation est bien prise en compte ! Merci !");
+      if (confirm("Souhaitez-vous confirmer votre commande ?")) {
+        alert("Votre réservation est bien prise en compte ! Merci :)")
+      } else {
+        alert("La commande n'est pas prise en compte :( ")
+      }
     }
     else if ((participantsNb.value < 1) && (theDate.value != '')) {
       alert("Veuillez renseigner le nombre de participants");
