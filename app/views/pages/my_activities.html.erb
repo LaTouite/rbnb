@@ -55,10 +55,10 @@
   <% if current_user.activities.any? && current_user.bookings.any? %>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="my_activities-tab" data-toggle="tab" href="#my_activities" role="tab" aria-controls="my_activities" aria-selected="true">Mes activités</a>
+        <a class="nav-link active" id="my_activities-tab" data-toggle="tab" href="#my_activities" role="tab" aria-controls="my_activities" aria-selected="true"> Mes activités (<%= @activities.size %>)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="bookings-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="bookings" aria-selected="false">Mes réservations</a>
+        <a class="nav-link" id="bookings-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="bookings" aria-selected="false">Mes réservations (<%= current_user.bookings.size %>) </a>
       </li>
     </ul>
   <% end %>
