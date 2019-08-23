@@ -5,7 +5,7 @@
   margin-top: 20px;
   margin: auto;
   width: 60%;
-  height: 70vh;
+  height: 80vh;
   background-color: white;
   border-radius: 10px;
   padding: 30px;
@@ -21,7 +21,9 @@
   flex-grow: 1;
 }
 
-.activity_schedule, .activity_address, .activity_min_number_of_participants, .activity_max_number_of_participants, .activity_min_age
+.activity_schedule, .activity_address, .activity_min_number_of_participants,
+ .activity_max_number_of_participants, .activity_min_age, .activity_title, .activity_description,
+ .activity_category
 {
   width: 100%;
 }
@@ -34,6 +36,19 @@
 //   width: 100%
 // }
 
+.correct-icone {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.correct-icone-small {
+  width: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
 .field {
   display: flex;
@@ -41,10 +56,16 @@
   margin-top: 20px;
 }
 
-.field i {
+.correct-icone i {
   margin-top: auto;
-  margin-right: 40px;
+  // margin-right: 40px;
   font-size: 50px;
+}
+
+.correct-icone-small i {
+  margin-top: auto;
+  // margin-right: 40px;
+  font-size: 30px;
 }
 
 .button_holder {
@@ -61,3 +82,5 @@
 #new_activity .dark-blue-empty-button:hover {
   color: white;
 }
+
+

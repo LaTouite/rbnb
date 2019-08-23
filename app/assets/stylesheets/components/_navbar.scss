@@ -46,18 +46,30 @@
   border: none;
 }
 
-#myTab li {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid $dark-grey;
-  padding: 10px;
-  color: $dark-blue;
-}
-
 .navbar-collapse {
   position: relative;
 }
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: $dark-blue;
+}
+
+.nav-item a {
+    color: $dark-blue;
+    text-decoration: none;
+}
+
+.nav-tabs .nav-link {
+    border: 0px solid $dark-blue;
+    border-bottom: 1px solid $dark-blue;
+    &:hover {
+      border: 0px solid $dark-blue;
+      border-bottom: 3px solid $dark-blue;
+    }
+  }
+
+
 
 // .notif {
 //   position: absolute;
