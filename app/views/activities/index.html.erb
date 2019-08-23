@@ -7,7 +7,7 @@
     <h2> <%=@activities.size %> chances de trouver votre bonheur </h2>
   <% end %>
   <div class="row">
-    <div class="col-6 lr-cards">
+    <div class="col-7 lr-cards">
       <% @activities.each do |activity| %>
       <div class="lr-card">
         <%= cl_image_tag activity.main_photo %>
@@ -53,7 +53,7 @@
     </div>
 
 
-    <div class="col-6">
+    <div class="col-5">
       <div
   id="map"
   data-markers="<%= @markers.to_json %>"
